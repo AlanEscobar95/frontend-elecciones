@@ -30,7 +30,8 @@ export class EditarCronogramaComponent implements OnInit {
         this.toastr.error(err.error.mensaje, 'Fail', {
           timeOut: 3000,  positionClass: 'toast-top-center',
         });
-        this.router.navigate(['/']);
+        this.volver
+        this.router.navigate(['/lista']);
       }
     );
   }
@@ -42,18 +43,21 @@ export class EditarCronogramaComponent implements OnInit {
         this.toastr.success(data.message, 'OK', {
           timeOut: 3000, positionClass: 'toast-top-center'
         });
+        this.volver();
         this.router.navigate(['/']);
       },
       err => {
         this.toastr.error(err.error.message, 'Fail', {
           timeOut: 3000,  positionClass: 'toast-top-center',
         });
+        this.volver();
+
       }
     );
   }
 
   volver(): void {
-    this.router.navigate(['/']);
+    this.router.navigate(['/lista']);
   }
 
 }

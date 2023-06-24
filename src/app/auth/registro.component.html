@@ -1,0 +1,54 @@
+<app-menu></app-menu>
+
+<div class="container d-flex justify-content-center">
+    <div class="card">
+        <div class="car-header">
+            <ul class="nav nav-tabs">
+                <li class="nav-items">
+                    <a class="nav-link" routerLink="/login"><i class="fas fa-sign-in-alt"></i>Login</a>
+                </li>
+                <li class="nav-items">
+                    <a class="nav-link active" routerLink="/registro"><i class="fas fa-user-plus"></i>Crear Cuenta</a>
+                </li>
+            </ul>
+        </div>
+        <div class="card-body">
+            <form>
+                <div class="form-group">
+                    <label for="nombreRol">Nombre Rol</label>
+                    <input type="text" class="form-control" name="nombreRol" id="nombreRol" autocomplete="off" required>
+                </div>
+                <div class="form-group">
+                    <label for="nombre">Nombre de Usuario</label>
+                    <input type="text" class="form-control" name="nombre" id="nombre" autocomplete="off" required>
+                </div>
+                <div class="form-group">
+                    <label for="apellido">Apellido</label>
+                    <input type="text" class="form-control" name="apellido" id="apellido" autocomplete="off" required>
+                </div>
+                <div class="form-group">
+                    <label for="carrera">Carrera</label>
+                    <input type="text" class="form-control" name="carrera" id="carrera" autocomplete="off" required>
+                </div>
+                  <div class="form-group">
+                    <label for="jornada">Jornada</label>
+                    <input type="text" class="form-control" name="jornada" id="jornada" autocomplete="off" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" name="email" id="email" autocomplete="off" required>
+                </div>
+               
+                <div class="form-group">
+                    <label for="password">Contraseña</label>
+                    <input type="text" class="form-control" name="password" id="password" required>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-outline-success btn-block">
+                        <i class="fas fa-user-plus"></i>Crear Cuenta
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
