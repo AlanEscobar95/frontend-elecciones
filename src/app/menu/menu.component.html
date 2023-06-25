@@ -4,7 +4,7 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ml-auto">
+      <ul class="navbar-nav mr-auto">
        
         <li class="nav-item">
             <a class="nav-link" routerLink="/"><i class="fas fa-home"></i> Inicio</a>
@@ -26,8 +26,11 @@
         <li class="nav-item">
           <a class="nav-link"  routerLink="/nuevo"><i class="fas fa-plus-circle"></i> Nueva Tarea</a>
         </li>
-        
       </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <button class="btn btn-outline-success" routerLink="/login" *ngIf="!isLogged"><i class="fas fa-sign-in-alt"></i>Iniciar Sesión</button>
+        <button class="btn btn-outline-danger" *ngIf="isLogged" (click)="logOut()"><i class="fas fa-sign-in-alt"></i>Cerrar sesión</button> 
+      </form>
     </div>
   </nav>
   
