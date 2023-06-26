@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { HttpClientModule } from '@angular/common/http';
@@ -20,6 +20,7 @@ import { RegistroComponent } from './auth/registro.component';
 import { LoginComponent } from './auth/login/login.component';
 import { SubirVotantesComponent } from './subir-votantes/subir-votantes.component';
 import { interceptorProvider } from './interceptors/cronograma.interceptor';
+import { NgxSpinnerModule } from 'ngx-spinner';
 
 
 @NgModule({
@@ -42,8 +43,10 @@ import { interceptorProvider } from './interceptors/cronograma.interceptor';
     BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
+    NgxSpinnerModule,
     ToastrModule.forRoot()
   ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [interceptorProvider],
   bootstrap: [AppComponent]
 })

@@ -15,15 +15,26 @@
         <div class="card-body">
             <form>
                 <div class="form-group">
-                    <label for="nombreRol">Nombre del Rol</label>
-                    <input type="text" class="form-control" name="nombreRol" id="nombreRol" autocomplete="off" required
-                    [(ngModel)]="nombreRol">
-                </div>
+                    <label for="nombreRol">
+                      <span class="arrow-down-icon"></span>
+                      Nombre del Rol
+                    </label>
+                    <select class="form-control" name="nombreRol" id="nombreRol" [(ngModel)]="nombreRol">
+                      <option value="seleccionarRol"disabled>--Seleccione el rol--</option>
+                      <option value="administrador">Administrador</option>
+                      <option value="candidato">Candidato</option>
+                      <option value="votante">Votante</option>
+                    </select>
+                  </div>
+
                 <div class="form-group">
                     <label for="correo">Correo Electrónico</label>
-                    <input type="email" class="form-control" name="correo" id="correo" required
-                    [(ngModel)]="correo">
+                    <input type="email" class="form-control" name="correo" id="correo" required pattern=".+@.+" [(ngModel)]="correo" #correoInput="ngModel" [ngClass]="{ 'is-invalid': correoInput.invalid && correoInput.touched }" maxlength="50">
+                    <div class="invalid-feedback" *ngIf="correoInput.invalid && correoInput.touched">
+                      Por favor, ingrese un correo electrónico válido.
+                    </div>
                 </div>
+
                 <div class="form-group">
                     <label for="password">Contraseña</label>
                     <input type="password" class="form-control" name="password" id="password" required
@@ -37,4 +48,7 @@
             </form>
         </div>
     </div>
+    <ngx-spinner bdColor="rgba(4, 5, 6, 0.8)" size="medium" color="#fff" template="<img src='https://media0.giphy.com/media/2yrnpJOcxjCN13GZFj/giphy.gif?cid=ecf05e47pwjxy1a81pkzmuexqtkafq5iobmo2jbkjrl169s7&ep=v1_stickers_search&rid=giphy.gif&ct=s' style='width: 80px; height: 80px;' />">
+        <p style="font-size: 20px; color: white">Cargando...</p>
+    </ngx-spinner>
 </div>
