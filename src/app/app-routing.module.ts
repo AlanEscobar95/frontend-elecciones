@@ -4,23 +4,24 @@ import { ListaCronogramaComponent } from './cronograma/lista-cronograma.componen
 import { DetalleCronogramaComponent } from './cronograma/detalle-cronograma.component';
 import { NuevoCronogramaComponent } from './cronograma/nuevo-cronograma.component';
 import { EditarCronogramaComponent } from './cronograma/editar-cronograma.component';
-import { VotantesComponent } from './votantes/votantes.component';
 import { SubirVotantesComponent } from './subir-votantes/subir-votantes.component';
 import { HomeComponent } from './home/home.component';
 import { RegistroComponent } from './auth/registro.component';
 import { LoginComponent } from './auth/login/login.component';
+import { LoginGuard } from './guards/login.guard';
+import { CronogramaGuard } from './guards/cronograma.guard';
+
 
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
-  {path: 'lista', component: ListaCronogramaComponent},
-  {path: 'votantes', component: VotantesComponent},
-  {path: 'subir-votante', component: SubirVotantesComponent},
-  {path: 'detalle/:id', component: DetalleCronogramaComponent},
-  {path: 'nuevo', component: NuevoCronogramaComponent},
-  {path: 'editar/:id', component: EditarCronogramaComponent},
-  {path: 'login', component: LoginComponent},
-  {path: 'registro', component: RegistroComponent},
+  {path: 'lista', component: ListaCronogramaComponent, canActivate: [CronogramaGuard], data: { expectedRol: 'administrador' }},
+  {path: 'subir-votante', component: SubirVotantesComponent, canActivate: [CronogramaGuard],data: { expectedRol: 'administrador' }},
+  {path: 'detalle/:id', component: DetalleCronogramaComponent, canActivate: [CronogramaGuard], data: { expectedRol: 'administrador' }},
+  {path: 'nuevo', component: NuevoCronogramaComponent, canActivate: [CronogramaGuard], data: { expectedRol: 'administrador' }},
+  {path: 'editar/:id', component: EditarCronogramaComponent,canActivate: [CronogramaGuard],  data: { expectedRol: 'administrador' }},
+  {path: 'login', component: LoginComponent,canActivate:[LoginGuard]},
+  {path: 'registro', component: RegistroComponent,canActivate:[LoginGuard]},
 
 
   {path: '**', redirectTo: '', pathMatch: 'full'}

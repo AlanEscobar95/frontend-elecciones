@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Cronograma } from '../models/cronograma';
 import { CronogramaService } from '../services/cronograma.service';
 import Swal from 'sweetalert2';
+import { TokenService } from '../services/token.service';
 
 
 
@@ -13,13 +14,16 @@ import Swal from 'sweetalert2';
 export class ListaCronogramaComponent implements OnInit {
   cronogramas: Cronograma[] = [];
   listaVacia = undefined;
+  isAdmin: boolean;
 
   constructor(
     private cronogramaService: CronogramaService,
+    private tokenService: TokenService,
     ) { }
 
   ngOnInit():void {
     this.cargarTareas();
+    this.isAdmin = this.tokenService.isAdmin();
   }
 
   cargarTareas(): void {

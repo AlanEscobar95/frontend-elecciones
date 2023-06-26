@@ -30,7 +30,7 @@ export class EditarCronogramaComponent implements OnInit {
         this.toastr.error(err.error.mensaje, 'Fail', {
           timeOut: 3000,  positionClass: 'toast-top-center',
         });
-        this.volver
+        this.volver();
         this.router.navigate(['/lista']);
       }
     );

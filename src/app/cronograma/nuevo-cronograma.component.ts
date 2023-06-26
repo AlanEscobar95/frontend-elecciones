@@ -3,6 +3,7 @@ import { CronogramaService } from '../services/cronograma.service';
 import { ToastrService } from 'ngx-toastr';
 import { Router } from '@angular/router';
 import { Cronograma } from '../models/cronograma';
+import { TokenService } from '../services/token.service';
 
 
 @Component({
@@ -18,11 +19,15 @@ export class NuevoCronogramaComponent {
 
   constructor(
     private cronogramaService: CronogramaService,
+    private tokenService:TokenService,
     private toastr: ToastrService,
     private router: Router
     ) { }
 
+  isAdmin: boolean;
+
   ngOnInit() {
+    this.isAdmin=this.tokenService.isAdmin();
   }
 
   onCreate(): void {
