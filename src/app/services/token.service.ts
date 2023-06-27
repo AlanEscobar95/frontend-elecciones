@@ -8,48 +8,52 @@ export class TokenService {
   constructor() { }
 
   isLogged(): boolean {
-    if (this.getToken()) {
-      return true;
-    }
-    return false;
+    return this.getToken() !== null;
   }
 
   setToken(token: string): void {
     localStorage.setItem('token', token);
   }
 
-  getToken(): string {
+  getToken(): string | null {
     return localStorage.getItem('token');
   }
 
-  getNombreUsuario(): string { 
-    if(!this.isLogged()) { 
+  getNombreUsuario(): string | null { 
+    if (!this.isLogged()) { 
       return null;
     }
-    const token = this.getToken();
-    const payload = token.split('.')[1];
-    const values = atob(payload);
-    const valuesJson = JSON.parse(values);
-    const nombre= valuesJson.nombre;
-    return nombre;
+    try {
+      const token = this.getToken();
+      const payload = token.split('.')[1];
+      const decodedPayload = atob(payload);
+      const valuesJson = JSON.parse(decodedPayload);
+      const nombre = valuesJson.nombre;
+      return nombre;
+    } catch (error) {
+      console.error('Error decoding token payload:', error);
+      return null;
+    }
   }
 
   isAdmin(): boolean {
     if (!this.isLogged()) {
-      return null;
-    }
-    const token = this.getToken();
-    const payload = token.split('.')[1];
-    const values = atob(payload);
-    const valuesJson = JSON.parse(values);
-    const roles = valuesJson.roles;
-    if (roles.indexOf('administrador') < 0) {
       return false;
     }
-    return true;
+    try {
+      const token = this.getToken();
+      const payload = token.split('.')[1];
+      const decodedPayload = atob(payload);
+      const valuesJson = JSON.parse(decodedPayload);
+      const roles = valuesJson.roles;
+      return roles.includes('administrador');
+    } catch (error) {
+      console.error('Error decoding token payload:', error);
+      return false;
+    }
   }
 
   logOut(): void {
-    localStorage.clear();
+    localStorage.removeItem('token');
   }
 }

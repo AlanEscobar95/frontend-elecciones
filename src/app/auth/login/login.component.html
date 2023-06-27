@@ -1,26 +1,23 @@
 <app-menu></app-menu>
 <!--PANTALLA DE lOGIN-->
 <div class="container d-flex justify-content-center">
-    <div class="card">
+    <div class="card ">
         <div class="car-header">
             <ul class="nav nav-tabs">
                 <li class="nav-items">
-                    <a class="nav-link active" routerLink="/login"><i class="fas fa-sign-in-alt"></i>Login</a>
-                </li>
-                <li class="nav-items">
-                    <a class="nav-link" routerLink="/registro"><i class="fas fa-user-plus"></i>Crear Cuenta</a>
+                    <a class="nav-link disabled" routerLink="/login"><i class="fas fa-sign-in-alt"></i>Login</a>
                 </li>
             </ul>
         </div>
         <div class="card-body">
-            <form>
+            <form #f="ngForm" novalidate (ngSubmit)="onLogin()">
                 <div class="form-group">
                     <label for="nombreRol">
                       <span class="arrow-down-icon"></span>
                       Nombre del Rol
                     </label>
                     <select class="form-control" name="nombreRol" id="nombreRol" [(ngModel)]="nombreRol">
-                      <option value="seleccionarRol"disabled>--Seleccione el rol--</option>
+                      <option value="seleccionarRol" disabled>--Seleccione el rol--</option>
                       <option value="administrador">Administrador</option>
                       <option value="candidato">Candidato</option>
                       <option value="votante">Votante</option>
@@ -41,7 +38,7 @@
                     [(ngModel)]="password">
                 </div>
                 <div class="form-group">
-                    <button class="btn btn-outline-success btn-block" (click)="onLogin()">
+                    <button class="btn btn-outline-success btn-block" [disabled]="!f.valid">
                         <i class="fas fa-sign-in-alt"></i>Iniciar Sesión
                     </button>
                 </div>

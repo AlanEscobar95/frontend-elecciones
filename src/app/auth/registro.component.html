@@ -1,54 +1,73 @@
 <app-menu></app-menu>
 
 <div class="container d-flex justify-content-center">
-    <div class="card">
+    <div class="card col-6">
         <div class="car-header">
             <ul class="nav nav-tabs">
                 <li class="nav-items">
-                    <a class="nav-link" routerLink="/login"><i class="fas fa-sign-in-alt"></i>Login</a>
-                </li>
-                <li class="nav-items">
-                    <a class="nav-link active" routerLink="/registro"><i class="fas fa-user-plus"></i>Crear Cuenta</a>
+                    <a class="nav-link" routerLink="/registro"><i class="fas fa-user-plus"></i>Crear Cuenta</a>
                 </li>
             </ul>
         </div>
         <div class="card-body">
-            <form>
+            <form #f="ngForm" novalidate (ngSubmit)="onRegister()">
                 <div class="form-group">
                     <label for="nombreRol">Nombre Rol</label>
-                    <input type="text" class="form-control" name="nombreRol" id="nombreRol" autocomplete="off" required>
+                    <input type="text" class="form-control" name="nombreRol" id="nombreRol" autocomplete="off" required
+                        [(ngModel)]="nombreRol">
                 </div>
                 <div class="form-group">
                     <label for="nombre">Nombre de Usuario</label>
-                    <input type="text" class="form-control" name="nombre" id="nombre" autocomplete="off" required>
+                    <input type="text" class="form-control" name="nombre" id="nombre" autocomplete="off" required
+                        [(ngModel)]="nombre">
                 </div>
                 <div class="form-group">
                     <label for="apellido">Apellido</label>
-                    <input type="text" class="form-control" name="apellido" id="apellido" autocomplete="off" required>
+                    <input type="text" class="form-control" name="apellido" id="apellido" autocomplete="off" required
+                        [(ngModel)]="apellido">
                 </div>
                 <div class="form-group">
                     <label for="carrera">Carrera</label>
-                    <input type="text" class="form-control" name="carrera" id="carrera" autocomplete="off" required>
-                </div>
-                  <div class="form-group">
-                    <label for="jornada">Jornada</label>
-                    <input type="text" class="form-control" name="jornada" id="jornada" autocomplete="off" required>
+                    <input type="text" class="form-control" name="carrera" id="carrera" autocomplete="off" required
+                        [(ngModel)]="carrera">
                 </div>
                 <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" class="form-control" name="email" id="email" autocomplete="off" required>
+                    <label for="jornada">Jornada</label>
+                    <input type="text" class="form-control" name="jornada" id="jornada" autocomplete="off" required
+                        [(ngModel)]="jornada">
                 </div>
-               
+                <div class="form-group">
+                    <label for="correo">Email</label>
+                    <input type="email" class="form-control" name="email" id="email" autocomplete="off" required
+                        [(ngModel)]="correo">
+                </div>
+
                 <div class="form-group">
                     <label for="password">Contraseña</label>
-                    <input type="text" class="form-control" name="password" id="password" required>
+                    <input type="password" class="form-control" name="password" id="password" required
+                        [(ngModel)]="password">
+                </div>
+
+                <div class="form-group">
+                    <label for="estadoUsuario">Estado Usuario</label>
+                    <input type="text" class="form-control" name="estadoUsuario" id="estadoUsuario" required
+                        [(ngModel)]="estadoUsuario">
+                </div>
+
+                <div class="form-group">
+                    <label for="estadoVoto">Estado Voto</label>
+                    <input type="text" class="form-control" name="estadoVoto" id="estadoVoto" required
+                        [(ngModel)]="estadoVoto">
                 </div>
                 <div class="form-group">
-                    <button class="btn btn-outline-success btn-block">
+                    <button class="btn btn-outline-success btn-block" [disabled]="!f.valid">
                         <i class="fas fa-user-plus"></i>Crear Cuenta
                     </button>
                 </div>
             </form>
         </div>
     </div>
+    <ngx-spinner bdColor="rgba(4, 5, 6, 0.8)" size="medium" color="#fff" template="<img src='https://media0.giphy.com/media/2yrnpJOcxjCN13GZFj/giphy.gif?cid=ecf05e47pwjxy1a81pkzmuexqtkafq5iobmo2jbkjrl169s7&ep=v1_stickers_search&rid=giphy.gif&ct=s' style='width: 80px; height: 80px;' />">
+        <p style="font-size: 20px; color: white">Registrando Usuario...</p>
+    </ngx-spinner>
 </div>

@@ -21,7 +21,7 @@ const routes: Routes = [
   {path: 'nuevo', component: NuevoCronogramaComponent, canActivate: [CronogramaGuard], data: { expectedRol: 'administrador' }},
   {path: 'editar/:id', component: EditarCronogramaComponent,canActivate: [CronogramaGuard],  data: { expectedRol: 'administrador' }},
   {path: 'login', component: LoginComponent,canActivate:[LoginGuard]},
-  {path: 'registro', component: RegistroComponent,canActivate:[LoginGuard]},
+  {path: 'registro', component: RegistroComponent,canActivate:[LoginGuard,CronogramaGuard],  data: { expectedRol: 'administrador' }},
 
 
   {path: '**', redirectTo: '', pathMatch: 'full'}

@@ -13,18 +13,25 @@
         <li class="nav-item">
           <a class="nav-link" routerLink="/lista" *ngIf="isAdmin"><i class="far fa-list-alt"></i> Lista de Tareas</a>
         </li>
+
+        <li class="nav-items">
+          <a class="nav-link" routerLink="/registro" *ngIf="isAdmin"><i class="fas fa-user-plus"></i>Crear Usuarios</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/subir-votante" *ngIf="isAdmin"><i class="far fa-list-alt"></i> Subir Votante</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link"  routerLink="/nuevo" *ngIf="isAdmin"><i class="fas fa-plus-circle" ></i> Nueva Tarea</a>
+        </li>
      
         <li class="nav-item">
           <a class="nav-link" routerLink="/registro-lista" *ngIf="isLogged"><i class="far fa-list-alt"></i> Registros de Listas</a>
         </li>
+        
         <li class="nav-item">
           <a class="nav-link" routerLink="/login" *ngIf="!isLogged"><i class="far fa-list-alt" ></i> Login</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/subir-votante" *ngIf="isAdmin"><i class="far fa-list-alt"></i> Subir Votante</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link"  routerLink="/nuevo" *ngIf="isAdmin"><i class="fas fa-plus-circle" ></i> Nueva Tarea</a>
         </li>
       </ul>
       <form class="form-inline my-2 my-lg-0">

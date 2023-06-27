@@ -21,6 +21,7 @@ import { LoginComponent } from './auth/login/login.component';
 import { SubirVotantesComponent } from './subir-votantes/subir-votantes.component';
 import { interceptorProvider } from './interceptors/cronograma.interceptor';
 import { NgxSpinnerModule } from 'ngx-spinner';
+import { ListaUsuariosComponent } from './usuarios/lista-usuarios/lista-usuarios.component';
 
 
 @NgModule({
@@ -35,6 +36,7 @@ import { NgxSpinnerModule } from 'ngx-spinner';
     HomeComponent,
     MenuComponent,
     RegistroComponent,
+    ListaUsuariosComponent,
   ],
   imports: [
     BrowserModule,
