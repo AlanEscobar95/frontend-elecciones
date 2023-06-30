@@ -30,6 +30,10 @@ export class RegistroComponent  implements OnInit{
     ) {}
 
   ngOnInit(): void {
+    this.nombreRol = "seleccionarRol";
+    this.carrera = "seleccionarCarrera";
+    this.jornada = "seleccionarJornada";
+
   }
 
     onRegister():void{

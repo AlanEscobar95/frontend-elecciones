@@ -1,19 +1,20 @@
 import { Component } from '@angular/core';
-import { Cronograma } from '../models/cronograma';
-import { CronogramaService } from '../services/cronograma.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
+import { CargoService } from '../services/cargo.service';
+import { Cargo } from '../models/cargo';
+
 
 @Component({
-  selector: 'app-detalle-cronograma',
-  templateUrl: './detalle-cronograma.component.html',
-  styleUrls: ['./detalle-cronograma.component.css']
+  selector: 'app-detalle-cargo',
+  templateUrl: './detalle-cargo.component.html',
+  styleUrls: ['./detalle-cargo.component.css']
 })
-export class DetalleCronogramaComponent {
-  cronograma: Cronograma = null;
+export class DetalleCargoComponent {
+  cargo: Cargo = null;
 
   constructor(
-    private cronogramaService: CronogramaService,
+    private cargoService: CargoService,
     private activatedRoute: ActivatedRoute,
     private toastr: ToastrService,
     private router: Router
@@ -21,9 +22,9 @@ export class DetalleCronogramaComponent {
 
   ngOnInit():void {
     const id = this.activatedRoute.snapshot.params['id'];
-    this.cronogramaService.detail(id).subscribe(
+    this.cargoService.detail(id).subscribe(
       data => {
-        this.cronograma = data;
+        this.cargo = data;
       },
       err => {
         this.toastr.error(err.error.message, 'Fail', {
@@ -34,7 +35,11 @@ export class DetalleCronogramaComponent {
     );
   }
 
+  nuevo(): void {
+    this.router.navigate(['/nuevo-cargo']);
+  }
   volver(): void {
-    this.router.navigate(['/lista']);
+    this.router.navigate(['/lista-cargo']);
   }
 }
+

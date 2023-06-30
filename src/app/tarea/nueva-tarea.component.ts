@@ -1,24 +1,25 @@
 import { Component } from '@angular/core';
-import { CronogramaService } from '../services/cronograma.service';
+import { TareaService } from '../services/tarea.service';
 import { ToastrService } from 'ngx-toastr';
 import { Router } from '@angular/router';
-import { Cronograma } from '../models/cronograma';
 import { TokenService } from '../services/token.service';
+import { Tarea } from '../models/tarea';
 
 
 @Component({
-  selector: 'app-nuevo-cronograma',
-  templateUrl: './nuevo-cronograma.component.html',
-  styleUrls: ['./nuevo-cronograma.component.css']
+  selector: 'app-nueva-tarea',
+  templateUrl: './nueva-tarea.component.html',
+  styleUrls: ['./nueva-tarea.component.css']
 })
-export class NuevoCronogramaComponent {
-  nomTarea = '';
+export class NuevaTareaComponent {
+  nombreTarea = '';
+  descripcion = '';
   encargado='';
-  fechaIni=new Date();
-  fechaFin=new Date();
+  fechaInicio=new Date();
+  fechaFinalizacion=new Date();
 
   constructor(
-    private cronogramaService: CronogramaService,
+    private tareaService: TareaService,
     private tokenService:TokenService,
     private toastr: ToastrService,
     private router: Router
@@ -31,8 +32,8 @@ export class NuevoCronogramaComponent {
   }
 
   onCreate(): void {
-    const cronograma = new Cronograma(this.nomTarea, this.encargado,this.fechaIni,this.fechaFin);
-    this.cronogramaService.save(cronograma).subscribe(
+    const tarea= new Tarea(this.nombreTarea,this.descripcion, this.encargado,this.fechaInicio,this.fechaFinalizacion);
+    this.tareaService.save(tarea).subscribe(
       data => {
         this.toastr.success(data.message, 'OK', {
           timeOut: 3000, positionClass: 'toast-top-center'
@@ -53,7 +54,7 @@ export class NuevoCronogramaComponent {
 
   validarFechaInicio() {
     const fechaActual = new Date();
-    const fechaInicio = new Date(this.fechaIni);
+    const fechaInicio = new Date(this.fechaInicio);
     return fechaInicio >= fechaActual;
   }
 

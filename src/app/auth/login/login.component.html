@@ -17,11 +17,9 @@
                       Nombre del Rol
                     </label>
                     <select class="form-control" name="nombreRol" id="nombreRol" [(ngModel)]="nombreRol">
-                      <option value="seleccionarRol" disabled>--Seleccione el rol--</option>
-                      <option value="administrador">Administrador</option>
-                      <option value="candidato">Candidato</option>
-                      <option value="votante">Votante</option>
-                    </select>
+                        <option value="seleccionarRol" disabled>--Seleccione el rol--</option>
+                        <option *ngFor="let rol of roles" [value]="rol">{{ rol }}</option>
+                      </select>
                   </div>
 
                 <div class="form-group">

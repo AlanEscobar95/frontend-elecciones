@@ -4,7 +4,9 @@
 
 export const environment = {
   production: false,
-  cronogramaURL: 'http://localhost:3000/cronograma/',
+  tareasURL: 'http://localhost:3000/tareas/',
+  cargoURL: 'http://localhost:3000/cargos/',
+
   authURL: 'http://localhost:3000/auth/'
 };
 

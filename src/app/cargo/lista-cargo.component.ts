@@ -1,35 +1,35 @@
 import { Component, OnInit } from '@angular/core';
-import { Cronograma } from '../models/cronograma';
-import { CronogramaService } from '../services/cronograma.service';
 import Swal from 'sweetalert2';
 import { TokenService } from '../services/token.service';
-
+import { CargoService } from '../services/cargo.service';
+import { Cargo } from '../models/cargo';
 
 
 @Component({
-  selector: 'app-lista-cronograma',
-  templateUrl: './lista-cronograma.component.html',
-  styleUrls: ['./lista-cronograma.component.css']
+  selector: 'app-lista-cargo',
+  templateUrl: './lista-cargo.component.html',
+  styleUrls: ['./lista-cargo.component.css']
 })
-export class ListaCronogramaComponent implements OnInit {
-  cronogramas: Cronograma[] = [];
+
+export class ListaCargoComponent implements OnInit {
+  cargos: Cargo[] = [];
   listaVacia = undefined;
   isAdmin: boolean;
 
   constructor(
-    private cronogramaService: CronogramaService,
+    private cargoService: CargoService,
     private tokenService: TokenService,
     ) { }
 
   ngOnInit():void {
-    this.cargarTareas();
+    this.cargarCargos();
     this.isAdmin = this.tokenService.isAdmin();
   }
 
-  cargarTareas(): void {
-    this.cronogramaService.lista().subscribe(
+  cargarCargos(): void {
+    this.cargoService.lista().subscribe(
       data => {
-        this.cronogramas = data;
+        this.cargos = data;
         this.listaVacia = undefined;
       },
       err => {
@@ -51,16 +51,16 @@ export class ListaCronogramaComponent implements OnInit {
     cancelButtonText:'No'
   }).then((result) => {
     if (result.value) {
-      this.cronogramaService.delete(id).subscribe(res => this.cargarTareas());
+      this.cargoService.delete(id).subscribe(res => this.cargarCargos());
       Swal.fire(
         'OK',
-        'Tarea Eliminada',
+        'Cargo Eliminado',
         'success'
       )
     } else if (result.dismiss === Swal.DismissReason.cancel){
       Swal.fire(
         'Cancelado',
-        'Tarea no eliminada',
+        'Cargo no eliminado',
         'error'
       )
     }

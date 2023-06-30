@@ -1,0 +1,17 @@
+<app-menu></app-menu>
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-md-4 mx-auto">
+            <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label for="nombreCargo">Nombre Cargo</label>
+                    <input minlength="1" maxlength="20" type="text" class="form-control" id="nombreCargo" name="nombreCargo"
+                    [(ngModel)]="nombreCargo" required>
+                </div>
+                       
+                <button type="submit" class="btn btn-outline-success btn-block" router-link="lista-cargo" [disabled]="!f.valid">Crear</button>
+                <button class="btn btn-outline-primary btn-block" (click)="volver()"><i class="fas fa-arrow-alt-circle-left"></i> Volver</button>
+            </form>
+        </div>
+    </div>
+</div>

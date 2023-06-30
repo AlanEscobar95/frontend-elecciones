@@ -1,20 +1,20 @@
 import { Component, OnInit } from '@angular/core';
-import { Cronograma } from '../models/cronograma';
-import { CronogramaService } from '../services/cronograma.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
+import { Tarea } from '../models/tarea';
+import { TareaService } from '../services/tarea.service';
 
 @Component({
-  selector: 'app-editar-cronograma',
-  templateUrl: './editar-cronograma.component.html',
-  styleUrls: ['./editar-cronograma.component.css']
+  selector: 'app-editar-tarea',
+  templateUrl: './editar-tarea.component.html',
+  styleUrls: ['./editar-tarea.component.css']
 })
-export class EditarCronogramaComponent implements OnInit {
+export class EditarTareaComponent implements OnInit {
 
-  cronograma: Cronograma = null;
+  tarea: Tarea = null;
 
   constructor(
-    private cronogramaService: CronogramaService,
+    private tareaService: TareaService,
     private activatedRoute: ActivatedRoute,
     private toastr: ToastrService,
     private router: Router
@@ -22,9 +22,9 @@ export class EditarCronogramaComponent implements OnInit {
 
   ngOnInit():void {
     const id = this.activatedRoute.snapshot.params['id'];
-    this.cronogramaService.detail(id).subscribe(
+    this.tareaService.detail(id).subscribe(
       data => {
-        this.cronograma = data;
+        this.tarea = data;
       },
       err => {
         this.toastr.error(err.error.mensaje, 'Fail', {
@@ -38,7 +38,7 @@ export class EditarCronogramaComponent implements OnInit {
 
   onUpdate(): void {
     const id = this.activatedRoute.snapshot.params['id'];
-    this.cronogramaService.update(id, this.cronograma).subscribe(
+    this.tareaService.update(id, this.tarea).subscribe(
       data => {
         this.toastr.success(data.message, 'OK', {
           timeOut: 3000, positionClass: 'toast-top-center'

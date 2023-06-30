@@ -5,17 +5,23 @@
         <div class="car-header">
             <ul class="nav nav-tabs">
                 <li class="nav-items">
-                    <a class="nav-link" routerLink="/registro"><i class="fas fa-user-plus"></i>Crear Cuenta</a>
+                    <a class="nav-link disabled" routerLink="/registro"><i class="fas fa-user-plus"></i>Crear Cuenta</a>
                 </li>
             </ul>
         </div>
         <div class="card-body">
             <form #f="ngForm" novalidate (ngSubmit)="onRegister()">
-                <div class="form-group">
-                    <label for="nombreRol">Nombre Rol</label>
-                    <input type="text" class="form-control" name="nombreRol" id="nombreRol" autocomplete="off" required
-                        [(ngModel)]="nombreRol">
-                </div>
+
+                  <div class="form-group">
+                    <label for="nombreRol">Nombre del Rol</label>
+                    <select class="form-select" name="nombreRol" id="nombreRol" [(ngModel)]="nombreRol">
+                      <option value="seleccionarRol" disabled>--Seleccione el Rol--</option>
+                      <option value="administrador">Administrador</option>
+                      <option value="candidato">Candidato</option>
+                      <option value="votante">Votante</option>
+                    </select>
+                  </div>
+
                 <div class="form-group">
                     <label for="nombre">Nombre de Usuario</label>
                     <input type="text" class="form-control" name="nombre" id="nombre" autocomplete="off" required
@@ -26,15 +32,29 @@
                     <input type="text" class="form-control" name="apellido" id="apellido" autocomplete="off" required
                         [(ngModel)]="apellido">
                 </div>
+
                 <div class="form-group">
                     <label for="carrera">Carrera</label>
-                    <input type="text" class="form-control" name="carrera" id="carrera" autocomplete="off" required
-                        [(ngModel)]="carrera">
-                </div>
+                    <select class="form-select" name="carrera" id="carrera" [(ngModel)]="carrera">
+                      <option value="seleccionarCarrera" disabled>--Seleccione la carrera--</option>
+                      <option value="desarrolloSoftware">Desarrollo de Software</option>
+                      <option value="disenoModas">Diseño de Modas</option>
+                      <option value="turismo">Turismo</option>
+                      <option value="marketing">Marketing</option>
+                      <option value="gastronomia">Arte Culinario</option>
+                      <option value="controlIncendios">Control de Incendios</option>
+                    </select>
+                  </div>
+
                 <div class="form-group">
                     <label for="jornada">Jornada</label>
-                    <input type="text" class="form-control" name="jornada" id="jornada" autocomplete="off" required
-                        [(ngModel)]="jornada">
+                    <select class="form-select" name="jornada" id="jornada" [(ngModel)]="jornada">
+                        <option value="seleccionarJornada" disabled>--Seleccione la jornada--</option>
+                        <option value="matutina">Matutina</option>
+                        <option value="vespertina">Vespertina</option>
+                        <option value="noctuna">Noctuna</option>
+   
+                      </select>
                 </div>
                 <div class="form-group">
                     <label for="correo">Email</label>
@@ -48,16 +68,16 @@
                         [(ngModel)]="password">
                 </div>
 
-                <div class="form-group">
-                    <label for="estadoUsuario">Estado Usuario</label>
-                    <input type="text" class="form-control" name="estadoUsuario" id="estadoUsuario" required
-                        [(ngModel)]="estadoUsuario">
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" 
+                    [(ngModel)]="estadoUsuario" checked required disabled>
+                    <label class="form-check-label" for="flexSwitchCheckDefault">Estado Usuario</label>
                 </div>
 
-                <div class="form-group">
-                    <label for="estadoVoto">Estado Voto</label>
-                    <input type="text" class="form-control" name="estadoVoto" id="estadoVoto" required
-                        [(ngModel)]="estadoVoto">
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" 
+                    [(ngModel)]="estadoVoto" required disabled>
+                    <label class="form-check-label" for="flexSwitchCheckDefault">Estado Voto</label>
                 </div>
                 <div class="form-group">
                     <button class="btn btn-outline-success btn-block" [disabled]="!f.valid">

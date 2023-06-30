@@ -16,6 +16,8 @@ export class LoginComponent implements OnInit {
   nombre: string;
   correo: string;
   password: string;
+  roles: string[] = ['Administrador', 'Candidato', 'Votante'];
+  
    constructor(
     private authService: AuthService,
     private tokenService: TokenService,
