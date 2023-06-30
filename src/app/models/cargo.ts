@@ -4,7 +4,6 @@ export class Cargo {
    
     constructor(nombreCargo: string){
         this.nombreCargo = nombreCargo;
-
     }
    }
    

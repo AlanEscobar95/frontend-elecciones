@@ -1,0 +1,23 @@
+<app-menu></app-menu>
+
+<div class="container">
+    <div class="row mt-5" *ngIf="periodo">
+      <div class="col-md-4 mx-auto">
+          <div class="card" style="width: 18rem;">
+              <div class="card-header text-center">
+                Detalle del Periodo
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item"><b>ID: </b>{{periodo.id}}</li>
+                <li class="list-group-item"><b> Periodo: </b>{{periodo.nombrePeriodoLectivo}}</li>
+                {{periodo.nombrePeriodoLectivo | json}}
+               
+              </ul>
+              <div class="card-footer">
+                  <button class="btn btn-outline-primary btn-block" (click)="volver()"><i class="fas fa-arrow-alt-circle-left"></i> Volver</button>
+              </div>
+            </div>
+            
+      </div>
+  </div>
+  </div>

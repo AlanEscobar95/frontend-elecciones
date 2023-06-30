@@ -1,0 +1,46 @@
+<app-menu></app-menu>
+<div class = 'container'>
+  <button class="btn btn-outline-success btn-block" style="width:150px" (click)="nuevo()" >Crear</button> 
+  <br>
+  <br>
+  </div>
+<div class = 'container' *ngIf="!listaVacia" >
+  
+    <table class="table table-dark text-center">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Nombre de la Lista</th>
+            <th scope="col">Slogan</th>
+            <th scope="col">Propuestas</th>
+            <th scope="col">Color</th>
+            <th scope="col">Número de Lista</th>
+            <th scope="col">Imagen</th>
+            <th scope="col" *ngIf="isLogged">Ver/Crear</th>
+            <th scope="col" *ngIf="isLogged">Editar</th>
+            <th scope="col" *ngIf="isLogged">Borrar</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let lista of listas">
+            <td>{{lista.id}}</td>
+            <td>{{lista.nombreLista}}</td>
+            <td>{{lista.slogan}}</td>
+            <td>{{lista.propuestas}}</td>
+            <td>{{lista.color}}</td>
+            <td>{{lista.numeroLista}}</td>
+            <td>{{lista.imagenLogo}}</td>
+
+            <td><button class="btn btn-outline-primary" routerLink="/detalle/lista/{{lista.id}}"><i class="far fa-eye"></i> Ver</button></td>
+            <td *ngIf="isLogged"><button class="btn btn-outline-warning" routerLink="/editar/lista/{{lista.id}}"><i class="far fa-edit"></i> Editar</button></td>
+            <td *ngIf="isLogged"><button class="btn btn-outline-danger" (click)="borrar(lista.id)"><i class="far fa-trash-alt"></i> Eliminar</button></td>
+          </tr>
+        </tbody>
+      </table>
+</div>
+
+<div class = 'container' *ngIf="listaVacia">
+  <div class="p-3 mb-2 bg-dark custom-text-color text-center">{{listaVacia}}</div>
+</div>
+
+

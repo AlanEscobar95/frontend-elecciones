@@ -1,0 +1,51 @@
+<app-menu></app-menu>
+
+<div class="container" *ngIf="lista">
+    <div class="row mt-5">
+        <div class="col-md-4 mx-auto">
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                
+                <div class="form-group">
+                    <label for="nombreLista">Nombre de la Lista</label>
+                    <input type="text" class="form-control" id="nombreLista" name="nombreLista"
+                    [(ngModel)]="lista.nombreLista" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="slogan">Slogan</label>
+                    <input type="text" class="form-control" id="slogan" name="slogan"
+                    [(ngModel)]="lista.slogan" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="propuestas">Propuestas</label>
+                    <input type="text" class="form-control" id="propuestas" name="propuestas"
+                    [(ngModel)]="lista.propuestas" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="color">Color</label>
+                    <input type="text" class="form-control" id="color" name="color"
+                    [(ngModel)]="lista.color" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="numeroLista">Número de Lista</label>
+                    <input type="text" class="form-control" id="numeroLista" name="numeroLista"
+                    [(ngModel)]="lista.numeroLista" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="imagenLogo">Imagen Logo</label>
+                    <input type="text" class="form-control" id="imagenLogo" name="imagenLogo"
+                    [(ngModel)]="lista.imagenLogo" required>
+                </div>
+
+                <button class="btn btn-outline-success btn-block" [disabled]="!f.valid">Actualizar</button>
+                <button class="btn btn-outline-primary btn-block" (click)="volver()"><i class="fas fa-arrow-alt-circle-left"></i> Volver</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+

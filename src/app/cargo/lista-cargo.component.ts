@@ -3,6 +3,7 @@ import Swal from 'sweetalert2';
 import { TokenService } from '../services/token.service';
 import { CargoService } from '../services/cargo.service';
 import { Cargo } from '../models/cargo';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -19,6 +20,9 @@ export class ListaCargoComponent implements OnInit {
   constructor(
     private cargoService: CargoService,
     private tokenService: TokenService,
+    private router: Router
+
+    
     ) { }
 
   ngOnInit():void {
@@ -65,5 +69,8 @@ export class ListaCargoComponent implements OnInit {
       )
     }
   })
+    }
+    nuevo(): void {
+      this.router.navigate(['/nuevo-cargo']);
     }
 }

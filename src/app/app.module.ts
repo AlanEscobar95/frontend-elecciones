@@ -33,6 +33,36 @@ import { DetalleTareaComponent } from './tarea/detalle-tarea.component';
 import { EditarTareaComponent } from './tarea/editar-tarea.component';
 import { ListaTareaComponent } from './tarea/lista-tarea.component';
 import { NuevaTareaComponent } from './tarea/nueva-tarea.component';
+/*===========CARRERA===========*/
+import { ListaCarreraComponent } from './carrera/lista-carrera.component';
+import { NuevaCarreraComponent } from './carrera/nueva-carrera.component';
+import { DetalleCarreraComponent } from './carrera/detalle-carrera.component';
+import { EditarCarreraComponent } from './carrera/editar-carrera.component';
+/*===========CRONOGRAMA===========*/
+import { ListaCronogramaComponent } from './cronograma/lista-cronograma.component';
+import { NuevoCronogramaComponent } from './cronograma/nuevo-cronograma.component';
+import { DetalleCronogramaComponent } from './cronograma/detalle-cronograma.component';
+import { EditarCronogramaComponent } from './cronograma/editar-cronograma.component';
+/*===========ESTADO===========*/
+import { NuevoEstadoComponent } from './estado/nuevo-estado.component';
+import { ListaEstadoComponent } from './estado/lista-estado.component'
+import { EditarEstadoComponent } from './estado/editar-estado.component';
+import { DetalleEstadoComponent } from './estado/detalle-estado.component';
+/*===========PERIODOS===========*/
+import { ListaPeriodoComponent } from './periodo/lista-periodo.component';
+import { NuevoPeriodoComponent } from './periodo/nuevo-periodo.component';
+import { EditarPeriodoComponent } from './periodo/editar-periodo.component';
+import { DetallePeriodoComponent } from './periodo/detalle-periodo.component';
+/*===========LISTA===========*/
+import { ListaComponent } from './lista/lista.component';
+import { DetalleListaComponent } from './lista/detalle-lista.component';
+import { EditarListaComponent } from './lista/editar-lista.component';
+import { NuevaListaComponent } from './lista/nueva-lista.component';
+/*===========TIPOLISTA===========*/
+import { ListaTipoListaComponent } from './tipo-lista/lista-tipo-lista.component';
+import { NuevoTipoListaComponent } from './tipo-lista/nuevo-tipo-lista.component';
+import { EditarTipoListaComponent } from './tipo-lista/editar-tipo-lista.component';
+import { DetalleTipoListaComponent } from './tipo-lista/detalle-tipo-lista.component';
 
 
 
@@ -53,6 +83,34 @@ import { NuevaTareaComponent } from './tarea/nueva-tarea.component';
     NuevoCargoComponent,
     EditarCargoComponent,
     DetalleCargoComponent,
+    ListaCarreraComponent,
+    NuevaCarreraComponent,
+    DetalleCarreraComponent,
+    EditarCarreraComponent,
+    ListaCronogramaComponent,
+    NuevoCronogramaComponent,
+    ListaEstadoComponent,
+    EditarCronogramaComponent,
+    NuevoEstadoComponent,
+    DetalleCronogramaComponent,
+    EditarEstadoComponent,
+    DetalleEstadoComponent,
+    ListaPeriodoComponent,
+    NuevoPeriodoComponent,
+    EditarPeriodoComponent,
+    DetallePeriodoComponent,
+    ListaComponent,
+    DetalleListaComponent,
+    EditarListaComponent,
+    NuevaListaComponent,
+    ListaTipoListaComponent,
+    NuevoTipoListaComponent,
+    EditarTipoListaComponent,
+    DetalleTipoListaComponent,
+    ListaCronogramaComponent,
+    NuevoCronogramaComponent,
+    EditarCronogramaComponent,
+    DetalleCronogramaComponent,
   ],
   imports: [
     BrowserModule,

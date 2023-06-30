@@ -44,7 +44,7 @@ export class EditarCargoComponent implements OnInit {
           timeOut: 3000, positionClass: 'toast-top-center'
         });
         this.volver();
-        this.router.navigate(['/']);
+        this.router.navigate(['/lista-cargo']);
       },
       err => {
         this.toastr.error(err.error.message, 'Fail', {

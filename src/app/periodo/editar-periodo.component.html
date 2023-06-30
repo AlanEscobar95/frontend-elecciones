@@ -1,0 +1,19 @@
+<app-menu></app-menu>
+
+<div class="container" *ngIf="periodo">
+    <div class="row mt-5">
+        <div class="col-md-4 mx-auto">
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+
+                <div class="form-group">
+                    <label for="nombrePeriodo">Periodo</label>
+                    <input type="text" class="form-control" id="nombrePeriodoLectivo" name="nombrePeriodoLectivo"
+                    [(ngModel)]="periodo.nombrePeriodoLectivo" required>
+                </div>
+                <button class="btn btn-outline-success btn-block" [disabled]="!f.valid">Actualizar</button>
+                <button class="btn btn-outline-primary btn-block" (click)="volver()"><i class="fas fa-arrow-alt-circle-left"></i> Volver</button>
+            </form>
+        </div>
+    </div>
+</div>
+

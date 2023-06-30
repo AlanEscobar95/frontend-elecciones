@@ -3,6 +3,7 @@ import Swal from 'sweetalert2';
 import { TokenService } from '../services/token.service';
 import { Tarea } from '../models/tarea';
 import { TareaService } from '../services/tarea.service';
+import { Router } from '@angular/router';
 
 
 
@@ -19,6 +20,8 @@ export class ListaTareaComponent implements OnInit {
   constructor(
     private tareaService: TareaService,
     private tokenService: TokenService,
+    private router: Router
+
     ) { }
 
   ngOnInit():void {
@@ -65,5 +68,8 @@ export class ListaTareaComponent implements OnInit {
       )
     }
   })
+    }
+    nuevo(): void {
+      this.router.navigate(['/nuevo-tarea']);
     }
 }

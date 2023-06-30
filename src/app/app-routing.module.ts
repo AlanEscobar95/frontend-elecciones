@@ -14,6 +14,30 @@ import { ListaCargoComponent } from './cargo/lista-cargo.component';
 import { DetalleCargoComponent } from './cargo/detalle-cargo.component';
 import { EditarCargoComponent } from './cargo/editar-cargo.component';
 import { NuevoCargoComponent } from './cargo/nuevo-cargo.component';
+import { NuevaCarreraComponent } from './carrera/nueva-carrera.component';
+import { ListaCarreraComponent } from './carrera/lista-carrera.component';
+import { EditarCarreraComponent } from './carrera/editar-carrera.component';
+import { DetalleCarreraComponent } from './carrera/detalle-carrera.component';
+import { ListaEstadoComponent } from './estado/lista-estado.component';
+import { DetalleEstadoComponent } from './estado/detalle-estado.component';
+import { EditarEstadoComponent } from './estado/editar-estado.component';
+import { NuevoEstadoComponent } from './estado/nuevo-estado.component';
+import { ListaCronogramaComponent } from './cronograma/lista-cronograma.component';
+import { DetalleCronogramaComponent } from './cronograma/detalle-cronograma.component';
+import { EditarCronogramaComponent } from './cronograma/editar-cronograma.component';
+import { NuevoCronogramaComponent } from './cronograma/nuevo-cronograma.component';
+import { DetallePeriodoComponent } from './periodo/detalle-periodo.component';
+import { EditarPeriodoComponent } from './periodo/editar-periodo.component';
+import { ListaPeriodoComponent } from './periodo/lista-periodo.component';
+import { NuevoPeriodoComponent } from './periodo/nuevo-periodo.component';
+import { DetalleTipoListaComponent } from './tipo-lista/detalle-tipo-lista.component';
+import { EditarTipoListaComponent } from './tipo-lista/editar-tipo-lista.component';
+import { ListaTipoListaComponent } from './tipo-lista/lista-tipo-lista.component';
+import { NuevoTipoListaComponent } from './tipo-lista/nuevo-tipo-lista.component';
+import { DetalleListaComponent } from './lista/detalle-lista.component';
+import { EditarListaComponent } from './lista/editar-lista.component';
+import { NuevaListaComponent } from './lista/nueva-lista.component';
+import { ListaComponent } from './lista/lista.component';
 
 
 
@@ -26,11 +50,50 @@ const routes: Routes = [
   {path: 'editar/:id', component: EditarTareaComponent,canActivate: [CronogramaGuard],  data: { expectedRol: 'administrador' }},
   {path: 'login', component: LoginComponent,canActivate:[LoginGuard]},
   {path: 'registro', component: RegistroComponent,canActivate:[CronogramaGuard],  data: { expectedRol: 'administrador' }},
+
+
+  
   /*CARGOS*/
   {path: 'detalle/cargo/:id', component: DetalleCargoComponent },
   {path: 'editar/cargo/:id', component: EditarCargoComponent },
   {path: 'lista-cargo', component: ListaCargoComponent },
   {path: 'nuevo-cargo', component: NuevoCargoComponent },
+
+  /*CARRERAS*/
+  {path: 'detalle/carrera/:id', component: DetalleCarreraComponent },
+  {path: 'editar/carrera/:id', component: EditarCarreraComponent },
+  {path: 'lista-carrera', component: ListaCarreraComponent },
+  {path: 'nueva-carrera', component: NuevaCarreraComponent },
+
+  /*PERIODO*/
+  {path: 'detalle/periodo/:id', component: DetallePeriodoComponent },
+  {path: 'editar/periodo/:id', component: EditarPeriodoComponent },
+  {path: 'lista-periodo', component: ListaPeriodoComponent },
+  {path: 'nuevo-periodo', component: NuevoPeriodoComponent },
+
+  /*ESTADO*/
+  {path: 'detalle/estado/:id', component: DetalleEstadoComponent },
+  {path: 'editar/estado/:id', component: EditarEstadoComponent },
+  {path: 'lista-estado', component: ListaEstadoComponent },
+  {path: 'nueva-estado', component: NuevoEstadoComponent },
+
+  /*CRONOGRAMA*/
+  {path: 'detalle/cronograma/:id', component: DetalleCronogramaComponent },
+  {path: 'editar/cronograma/:id', component: EditarCronogramaComponent },
+  {path: 'lista-cronograma', component: ListaCronogramaComponent },
+  {path: 'nuevo-cronograma', component: NuevoCronogramaComponent },
+
+  /*TIPO LISTA*/
+  {path: 'detalle/tipo-lista/:id', component: DetalleTipoListaComponent },
+  {path: 'editar/tipo-lista/:id', component: EditarTipoListaComponent },
+  {path: 'lista-tipo-lista', component: ListaTipoListaComponent },
+  {path: 'nuevo-tipo-lista', component: NuevoTipoListaComponent },
+
+  /*LISTA*/
+  {path: 'detalle/lista/:id', component: DetalleListaComponent },
+  {path: 'editar/lista/:id', component: EditarListaComponent },
+  {path: 'listar-lista', component: ListaComponent },
+  {path: 'nueva-lista', component: NuevaListaComponent },
 
 
   {path: '**', redirectTo: '', pathMatch: 'full'}

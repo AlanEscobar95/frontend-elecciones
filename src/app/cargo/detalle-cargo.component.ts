@@ -35,9 +35,6 @@ export class DetalleCargoComponent {
     );
   }
 
-  nuevo(): void {
-    this.router.navigate(['/nuevo-cargo']);
-  }
   volver(): void {
     this.router.navigate(['/lista-cargo']);
   }

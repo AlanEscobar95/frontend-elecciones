@@ -6,8 +6,14 @@ export const environment = {
   production: false,
   tareasURL: 'http://localhost:3000/tareas/',
   cargoURL: 'http://localhost:3000/cargos/',
+  carreraURL: 'http://localhost:3000/carreras/',
+  periodoURL: 'http://localhost:3000/periodoLectivo/',
+  authURL: 'http://localhost:3000/auth/',
+  cronogramaURL: 'http://localhost:3000/cronograma/',
+  estadoURL:'http://localhost:3000/estados/',
+  tipoListaURL:'http://localhost:3000/tipo-listas/',
 
-  authURL: 'http://localhost:3000/auth/'
+  listaURL:'http://localhost:3000/listas/'
 };
 
 /*
