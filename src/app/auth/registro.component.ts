@@ -38,14 +38,14 @@ export class RegistroComponent  implements OnInit{
 
     onRegister():void{
       this.spinner.show();
-      this.usuario = new NuevoUsuarioDto(this.nombreRol,this.nombre,this.apellido,this.carrera,this.jornada, this.correo, this.password,this.estadoUsuario,this.estadoVoto);
+      this.usuario = new NuevoUsuarioDto(this.nombreRol,this.nombre,this.apellido,this.carrera,this.jornada, this.correo, this.password, this.estadoUsuario,this.estadoVoto);
       this.authService.registro(this.usuario).subscribe(
         data=> {
           this.toastrService.success(data.message, 'OK', {
             timeOut: 3000, positionClass: 'toast-top-center',
           });
           this.spinner.hide();
-          this.router.navigate(['/']);
+          this.router.navigate(['/lista-usuario']);
         },
         err =>{
           this.toastrService.error(err.error.message, 'Fail', {

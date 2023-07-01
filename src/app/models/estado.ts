@@ -3,7 +3,7 @@ export class Estado {
     nombreEstado: string;
    
     constructor(nombreEstado: string){
-        this.nombreEstado = this.nombreEstado;
+        this.nombreEstado = nombreEstado;
     }
-}
+   }
    

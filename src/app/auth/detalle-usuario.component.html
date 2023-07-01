@@ -1,0 +1,30 @@
+<app-menu></app-menu>
+<app-sidenav></app-sidenav>
+
+<div class="container">
+    <div class="row mt-5" *ngIf="usuario">
+      <div class="col-md-4 mx-auto">
+          <div class="card" style="width: 18rem;">
+              <div class="card-header text-center">
+                Detalle del usuario
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item"><b>ID: </b>{{usuario.id}}</li>
+                <li class="list-group-item"><b> Nombre del usuario: </b>{{usuario.nombre}}</li>
+                <li class="list-group-item"><b>Rol del Usuario: </b>{{usuario.nombreRol}}</li>
+                <li class="list-group-item"><b>Apellido del usuario: </b>{{usuario.apellido}}</li>
+                <li class="list-group-item"><b>Carrera del usuario: </b>{{usuario.carrera}}</li>
+                <li class="list-group-item"><b>Jornada del Usuario: </b>{{usuario.jornada}}</li>
+                <li class="list-group-item"><b>Correo del usuario: </b>{{usuario.correo_electronico}}</li>
+                <li class="list-group-item"><b>Contraseña del usuario: </b>{{usuario.password}}</li>
+                <li class="list-group-item"><b>Estado: </b>{{usuario.estado_usuario}}</li>
+                <li class="list-group-item"><b>Estado del voto: </b>{{usuario.estado_voto}}</li>
+              </ul>
+              <div class="card-footer">
+                  <button class="btn btn-outline-primary btn-block" (click)="volver()"><i class="fas fa-arrow-alt-circle-left"></i> Volver</button>
+              </div>
+            </div>
+            
+      </div>
+  </div>
+  </div>

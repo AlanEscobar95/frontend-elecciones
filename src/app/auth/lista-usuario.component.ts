@@ -1,39 +1,37 @@
-import { Component, OnInit } from '@angular/core';
-import Swal from 'sweetalert2';
+import { Component } from '@angular/core';
 import { TokenService } from '../services/token.service';
-import { CargoService } from '../services/cargo.service';
-import { Cargo } from '../models/cargo';
 import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
+import { NuevoUsuarioDto } from '../models/nuevo-usuario.dto';
+import { AuthService } from '../services/auth.service';
 
 
 @Component({
-  selector: 'app-lista-cargo',
-  templateUrl: './lista-cargo.component.html',
-  styleUrls: ['./lista-cargo.component.css']
+  selector: 'app-lista-usuario',
+  templateUrl: './lista-usuario.component.html',
+  styleUrls: ['./lista-usuario.component.css']
 })
-
-export class ListaCargoComponent implements OnInit {
-  cargos: Cargo[] = [];
+export class ListaUsuarioComponent {
+  usuario: NuevoUsuarioDto[] = [];
   listaVacia = undefined;
   isAdmin: boolean;
 
   constructor(
-    private cargoService: CargoService,
+    private authService: AuthService,
     private tokenService: TokenService,
     private router: Router
 
-    
     ) { }
 
   ngOnInit():void {
-    this.cargarCargos();
+    this.cargarUsuario();
     this.isAdmin = this.tokenService.isAdmin();
   }
 
-  cargarCargos(): void {
-    this.cargoService.lista().subscribe(
+  cargarUsuario(): void {
+    this.authService.lista().subscribe(
       data => {
-        this.cargos = data;
+        this.usuario = data;
         this.listaVacia = undefined;
       },
       err => {
@@ -55,21 +53,22 @@ export class ListaCargoComponent implements OnInit {
     cancelButtonText:'No'
   }).then((result) => {
     if (result.value) {
-      this.cargoService.delete(id).subscribe(res => this.cargarCargos());
+      this.authService.delete(id).subscribe(res => this.cargarUsuario());
       Swal.fire(
         'OK',
-        'Cargo Eliminado',
+        'Usuario Eliminado',
         'success'
       )
     } else if (result.dismiss === Swal.DismissReason.cancel){
       Swal.fire(
         'Cancelado',
-        'Cargo no eliminado',
+        'Usuario no eliminado',
         'error'
       )
     }
   })
     }
+
     nuevo(): void {
       this.router.navigate(['/nuevo-usuario']);
     }

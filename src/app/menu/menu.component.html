@@ -1,5 +1,12 @@
+
+<section>
+  <h1>Y A V I V O T E<img src="/imagenes/Logo.png" alt="imagen" width="100px">
+  </h1>
+</section>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-3">
-    <a class="navbar-brand" href="#">Yavivote</a>
+  <a class="navbar-brand" href="#">
+      <img src="https://yavirac.edu.ec/img/Logo%20Yavirac.png" width="120px">
+  </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -18,11 +25,12 @@
         <li class="nav-item">
           <a class="nav-link" routerLink="/lista-cargo" *ngIf="isAdmin"><i class="far fa-list-alt"></i> Lista de Cargos</a>
         </li>-->
-
+        
+        <!--
         <li class="nav-item">
           <a class="nav-link" routerLink="/lista-carrera" *ngIf="isAdmin"><i class="far fa-list-alt"></i> Lista de Carreras</a>
-        </li>
-
+        </li> -->
+ <!--
         <li class="nav-items">
           <a class="nav-link" routerLink="/registro" *ngIf="isAdmin"><i class="fas fa-user-plus"></i>Crear Usuarios</a>
         </li>
@@ -31,27 +39,32 @@
           <a class="nav-link" routerLink="/subir-votante" *ngIf="isAdmin"><i class="far fa-list-alt"></i> Subir Votante</a>
         </li>
         
-        <!--
+        
         <li class="nav-item">
           <a class="nav-link" routerLink="/lista-cronograma" *ngIf="isAdmin"><i class="far fa-list-alt" ></i> Cronograma</a>
-        </li>-->
+        </li>
 
         <li class="nav-item">
           <a class="nav-link" routerLink="/lista-periodo" *ngIf="isAdmin"><i class="far fa-list-alt"></i> Periodos </a>
         </li>
         
-
-        <li class="nav-item">
-          <a class="nav-link"  routerLink="/nuevo" *ngIf="isAdmin"><i class="fas fa-plus-circle" ></i> Nueva Tarea</a>
-        </li>
-         
-        <!--
+       
         <li class="nav-item">
           <a class="nav-link" routerLink="/lista-tipo-lista" *ngIf="isAdmin"><i class="far fa-list-alt" ></i> Tipos de Listas</a>
         </li>-->
-     
+
+        <!--
         <li class="nav-item">
           <a class="nav-link" routerLink="/listar-lista" *ngIf="isLogged"><i class="far fa-list-alt"></i> Registros de Listas</a>
+        </li>
+     
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/lista-estado" *ngIf="isLogged"><i class="far fa-list-alt"></i> Lista Estado</a>
+        </li>
+
+      -->
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/lista-usuario" *ngIf="isLogged"><i class="far fa-list-alt"></i> Lista de Usuarios</a>
         </li>
 
       
@@ -66,4 +79,5 @@
       </form>
     </div>
   </nav>
+
   

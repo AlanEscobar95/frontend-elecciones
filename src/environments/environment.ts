@@ -12,7 +12,7 @@ export const environment = {
   cronogramaURL: 'http://localhost:3000/cronograma/',
   estadoURL:'http://localhost:3000/estados/',
   tipoListaURL:'http://localhost:3000/tipo-listas/',
-
+  usuarioURL:'http://localhost:3000/usuario/',
   listaURL:'http://localhost:3000/listas/'
 };
 

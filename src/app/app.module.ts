@@ -1,4 +1,4 @@
-import { NgModule,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { HttpClientModule } from '@angular/common/http';
@@ -10,19 +10,20 @@ import { AppComponent } from './app.component';
 /*===========Externals===========*/
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
+/*=========SIDEBAR===========*/
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
 
 
 /*===========HOME===========*/
 import { HomeComponent } from './home/home.component';
 import { MenuComponent } from './menu/menu.component';
 /*===========REGISTRO Y LOGIN===========*/
-import { RegistroComponent } from './auth/registro.component';
 import { LoginComponent } from './auth/login/login.component';
 /*=========================*/
 import { SubirVotantesComponent } from './subir-votantes/subir-votantes.component';
 import { interceptorProvider } from './interceptors/cronograma.interceptor';
 import { NgxSpinnerModule } from 'ngx-spinner';
-import { ListaUsuariosComponent } from './usuarios/lista-usuarios/lista-usuarios.component';
 /*===========CARGOS===========*/
 import { ListaCargoComponent } from './cargo/lista-cargo.component';
 import { NuevoCargoComponent } from './cargo/nuevo-cargo.component';
@@ -45,7 +46,7 @@ import { DetalleCronogramaComponent } from './cronograma/detalle-cronograma.comp
 import { EditarCronogramaComponent } from './cronograma/editar-cronograma.component';
 /*===========ESTADO===========*/
 import { NuevoEstadoComponent } from './estado/nuevo-estado.component';
-import { ListaEstadoComponent } from './estado/lista-estado.component'
+import { ListaEstadoComponent } from './estado/lista-estado.component';
 import { EditarEstadoComponent } from './estado/editar-estado.component';
 import { DetalleEstadoComponent } from './estado/detalle-estado.component';
 /*===========PERIODOS===========*/
@@ -63,8 +64,13 @@ import { ListaTipoListaComponent } from './tipo-lista/lista-tipo-lista.component
 import { NuevoTipoListaComponent } from './tipo-lista/nuevo-tipo-lista.component';
 import { EditarTipoListaComponent } from './tipo-lista/editar-tipo-lista.component';
 import { DetalleTipoListaComponent } from './tipo-lista/detalle-tipo-lista.component';
+import { SidenavComponent } from './sidenav/sidenav.component';
+/*===========Usuarios===========*/
 
-
+import { RegistroComponent } from './auth/registro.component';
+import { EditarUsuarioComponent } from './auth/editar-usuario.component';
+import { DetalleUsuarioComponent } from './auth/detalle-usuario.component';
+import { ListaUsuarioComponent } from './auth/lista-usuario.component';
 
 @NgModule({
   declarations: [
@@ -78,7 +84,6 @@ import { DetalleTipoListaComponent } from './tipo-lista/detalle-tipo-lista.compo
     HomeComponent,
     MenuComponent,
     RegistroComponent,
-    ListaUsuariosComponent,
     ListaCargoComponent,
     NuevoCargoComponent,
     EditarCargoComponent,
@@ -107,10 +112,10 @@ import { DetalleTipoListaComponent } from './tipo-lista/detalle-tipo-lista.compo
     NuevoTipoListaComponent,
     EditarTipoListaComponent,
     DetalleTipoListaComponent,
-    ListaCronogramaComponent,
-    NuevoCronogramaComponent,
-    EditarCronogramaComponent,
-    DetalleCronogramaComponent,
+    SidenavComponent,
+    ListaUsuarioComponent,
+    EditarUsuarioComponent,
+    DetalleUsuarioComponent
   ],
   imports: [
     BrowserModule,
@@ -120,6 +125,9 @@ import { DetalleTipoListaComponent } from './tipo-lista/detalle-tipo-lista.compo
     FormsModule,
     ReactiveFormsModule,
     NgxSpinnerModule,
+    /*=====SIDEBAR====*/
+    MatSidenavModule,
+    MatListModule,
     ToastrModule.forRoot()
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

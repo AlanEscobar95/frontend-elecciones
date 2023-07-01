@@ -38,8 +38,9 @@ import { DetalleListaComponent } from './lista/detalle-lista.component';
 import { EditarListaComponent } from './lista/editar-lista.component';
 import { NuevaListaComponent } from './lista/nueva-lista.component';
 import { ListaComponent } from './lista/lista.component';
-
-
+import { DetalleUsuarioComponent } from './auth/detalle-usuario.component';
+import { EditarUsuarioComponent } from './auth/editar-usuario.component';
+import { ListaUsuarioComponent } from './auth/lista-usuario.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -75,7 +76,7 @@ const routes: Routes = [
   {path: 'detalle/estado/:id', component: DetalleEstadoComponent },
   {path: 'editar/estado/:id', component: EditarEstadoComponent },
   {path: 'lista-estado', component: ListaEstadoComponent },
-  {path: 'nueva-estado', component: NuevoEstadoComponent },
+  {path: 'nuevo-estado', component: NuevoEstadoComponent },
 
   /*CRONOGRAMA*/
   {path: 'detalle/cronograma/:id', component: DetalleCronogramaComponent },
@@ -94,6 +95,14 @@ const routes: Routes = [
   {path: 'editar/lista/:id', component: EditarListaComponent },
   {path: 'listar-lista', component: ListaComponent },
   {path: 'nueva-lista', component: NuevaListaComponent },
+
+  /*Usuario*/
+  {path: 'detalle/usuario/:id', component: DetalleUsuarioComponent },
+  {path: 'editar/usuario/:id', component: EditarUsuarioComponent },
+  {path: 'lista-usuario', component: ListaUsuarioComponent },
+  {path: 'nuevo-usuario', component: RegistroComponent },
+
+  
 
 
   {path: '**', redirectTo: '', pathMatch: 'full'}

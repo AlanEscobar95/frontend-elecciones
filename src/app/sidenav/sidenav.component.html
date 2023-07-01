@@ -1,0 +1,120 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+
+</head>
+
+<body>
+    <div class="area">
+    <nav class="main-menu">
+        <ul>
+            <li>
+                <h1 style="color:white; text-align: center;">USUARIO</h1>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <img src="https://assets.stickpng.com/images/585e4beacb11b227491c3399.png" width="100px" style="display: block; margin: 0 auto;">
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <h2 class="display-4" style="color:white; text-align: center;;" *ngIf="nombre">{{nombre}} </h2>
+            </li>
+            <li>
+                <a class="nav-link" routerLink="/">
+                    <i class="fa fa-home fa-2x"></i>
+                    <span class="nav-text">
+                        Inicio
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a class="nav-link" routerLink="/lista-cronograma" *ngIf="isAdmin">
+                    <i class="fa fa-calendar fa-2x"></i>
+                    <span class="nav-text">
+                        Cronograma
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a class="nav-link" routerLink="/lista-periodo" *ngIf="isAdmin">
+                    <i class="fa fa-clock-o fa-2x"></i>
+                    <span class="nav-text">
+                        Lista de Periodos
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a class="nav-link" routerLink="/lista" *ngIf="isAdmin">
+                    <i class="fa fa-list-alt fa-2x"></i>
+                    <span class="nav-text">
+                        Lista de Tareas
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a class="nav-link" routerLink="/lista-cargo" *ngIf="isAdmin">
+                    <i class="fa fa-user fa-2x"></i>
+                    <span class="nav-text">
+                        Lista de Cargos
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a class="nav-link" routerLink="/lista-carrera" *ngIf="isAdmin">
+                    <i class="fa fa-book fa-2x"></i>
+                    <span class="nav-text">
+                        Lista de Carreras
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a class="nav-link" routerLink="/registro" *ngIf="isAdmin">
+                    <i class="fa fa-male fa-2x"></i>
+                    <span class="nav-text">
+                        Crear Usuarios
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a class="nav-link" routerLink="/subir-votante" *ngIf="isAdmin">
+                    <i class="fa fa-cloud-upload fa-2x"></i>
+                    <span class="nav-text">
+                        Subir Votante
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a class="nav-link" routerLink="/listar-lista" *ngIf="isAdmin">
+                    <i class="fa fa-users fa-2x"></i>
+                    <span class="nav-text">
+                        Registros de Listas
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a class="nav-link" routerLink="/lista-estado" *ngIf="isAdmin">
+                    <i class="fa fa-check-square fa-2x"></i>
+                    <span class="nav-text">
+                        Lista Estado
+                    </span>
+                </a>
+            </li>
+        </ul>
+        <ul class="logout">
+            <li>
+                <a class="nav-link" routerLink="/login" *ngIf="!isLogged">
+                    <i class="fa fa-book fa-2x"></i>
+                    <span class="nav-text">
+                        Logout
+                    </span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</div>
+</body>
+
+</html>

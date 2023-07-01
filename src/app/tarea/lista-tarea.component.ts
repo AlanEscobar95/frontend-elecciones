@@ -70,6 +70,6 @@ export class ListaTareaComponent implements OnInit {
   })
     }
     nuevo(): void {
-      this.router.navigate(['/nuevo-tarea']);
+      this.router.navigate(['/nuevo']);
     }
 }

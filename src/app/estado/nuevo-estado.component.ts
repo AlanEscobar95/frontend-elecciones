@@ -10,9 +10,9 @@ import { Estado } from '../models/estado';
   styleUrls: ['./nuevo-estado.component.css']
 })
 export class NuevoEstadoComponent {
-
   nombreEstado = '';
   
+
   constructor(
     private estadoService: EstadoService,
     private tokenService:TokenService,

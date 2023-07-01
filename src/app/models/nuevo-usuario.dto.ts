@@ -1,8 +1,9 @@
 export class NuevoUsuarioDto{
-   
-    nombreRol: string;
+    id?: number;
 
     nombre:string;
+   
+    nombreRol: string;
 
     apellido:string;
 
@@ -19,8 +20,8 @@ export class NuevoUsuarioDto{
     estado_voto: boolean;
 
     constructor(nombreRol:string,nombre:string,apellido:string,carrera:string,jornada:string,correo_electronico:string,password:string,estado_usuario:boolean,estado_voto:boolean){
-        this.nombreRol = nombreRol;
         this.nombre = nombre;
+        this.nombreRol = nombreRol;
         this.apellido = apellido;
         this.carrera = carrera;
         this.jornada = jornada;
