@@ -1,21 +1,28 @@
+
+<!--copiar inicio-->
 <app-menu></app-menu>
-<app-sidenav></app-sidenav>
-
-<div class="container" *ngIf="carrera">
-    <div class="row mt-5">
-        <div class="col-md-4 mx-auto">
-            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
-
-                <div class="form-group">
-                    <label for="nombreCarrera">Nombre de la Carrera</label>
-                    <input type="text" class="form-control" id="nombreCarrera" name="nombreCarrera"
-                    [(ngModel)]="carrera.nombreCarrera" required>
-                </div>
-                <button class="btn btn-outline-success btn-block" [disabled]="!f.valid">Actualizar</button>
-                <button class="btn btn-outline-primary btn-block" (click)="volver()"><i class="fas fa-arrow-alt-circle-left"></i> Volver</button>
-            </form>
+<div class="container">
+  <div class="grid-container">
+    <div class="sidebar">
+      <app-sidenav></app-sidenav>
+    </div>
+    
+    <div class="container" *ngIf="carrera">
+        <div class="row mt-5">
+            <div class="col-md-4 mx-auto">
+                <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+    
+                    <div class="form-group">
+                        <label for="nombreCarrera">Nombre de la Carrera</label>
+                        <input type="text" class="form-control" id="nombreCarrera" name="nombreCarrera"
+                        [(ngModel)]="carrera.nombreCarrera" required>
+                    </div>
+                    <button class="btn btn-outline-success btn-block" [disabled]="!f.valid">Actualizar</button>
+                    <button class="btn btn-outline-primary btn-block" (click)="volver()"><i class="fas fa-arrow-alt-circle-left"></i> Volver</button>
+                </form>
+            </div>
         </div>
     </div>
+  </div>
 </div>
-
-
+<!--copiar fin-->

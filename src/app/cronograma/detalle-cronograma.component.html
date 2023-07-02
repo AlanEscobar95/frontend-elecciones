@@ -1,24 +1,33 @@
 
+<!--copiar inicio-->
 <app-menu></app-menu>
-<app-sidenav></app-sidenav>
-
 <div class="container">
-    <div class="row mt-5" *ngIf="cronograma">
-      <div class="col-md-4 mx-auto">
-          <div class="card" style="width: 18rem;">
-              <div class="card-header text-center">
-                Detalle
-              </div>
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item"><b>ID: </b>{{cronograma.id}}</li>
-                <li class="list-group-item"><b> Nombre del Cronograma: </b>{{cronograma.nombreCronograma}}</li>
-               
-              </ul>
-              <div class="card-footer">
-                  <button class="btn btn-outline-primary btn-block" (click)="volver()"><i class="fas fa-arrow-alt-circle-left"></i> Volver</button>
-              </div>
+  <div class="grid-container">
+    <div class="sidebar">
+      <app-sidenav></app-sidenav>
+    </div>
+<!--copiar Fin-->
+<div class="container">
+  <div class="row mt-5" *ngIf="cronograma">
+    <div class="col-md-4 mx-auto">
+        <div class="card" style="width: 18rem;">
+            <div class="card-header text-center">
+              Detalle
             </div>
-            
-      </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item"><b>ID: </b>{{cronograma.id}}</li>
+              <li class="list-group-item"><b> Nombre del Cronograma: </b>{{cronograma.nombreCronograma}}</li>
+             
+            </ul>
+            <div class="card-footer">
+                <button class="btn btn-outline-primary btn-block" (click)="volver()"><i class="fas fa-arrow-alt-circle-left"></i> Volver</button>
+            </div>
+          </div>
+          
+    </div>
+</div>
+</div>
+<!--copiar inicio-->
   </div>
-  </div>
+</div>
+<!--copiar fin-->

@@ -11,6 +11,8 @@ export class SidenavComponent implements OnInit {
 
   isLogged: boolean;
   isAdmin: boolean;
+  isVoter: boolean;
+  isCandidate: boolean;
   nombre: string;
 
 
@@ -20,6 +22,8 @@ export class SidenavComponent implements OnInit {
   ngOnInit(): void {
     this.isLogged = this.tokenService.isLogged();
     this.isAdmin = this.tokenService.isAdmin();
+    this.isVoter = this.tokenService.isVoter();
+    this.isVoter = this.tokenService.isCandidate();
     this.nombre = this.tokenService.getNombreUsuario();
 
  }

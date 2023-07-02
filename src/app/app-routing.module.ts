@@ -41,6 +41,7 @@ import { ListaComponent } from './lista/lista.component';
 import { DetalleUsuarioComponent } from './auth/detalle-usuario.component';
 import { EditarUsuarioComponent } from './auth/editar-usuario.component';
 import { ListaUsuarioComponent } from './auth/lista-usuario.component';
+import { ListaVotanteComponent } from './lista-votante/lista-votante.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -101,6 +102,9 @@ const routes: Routes = [
   {path: 'editar/usuario/:id', component: EditarUsuarioComponent },
   {path: 'lista-usuario', component: ListaUsuarioComponent },
   {path: 'nuevo-usuario', component: RegistroComponent },
+
+  /*VOTANTE*/
+  {path: 'lista-votante', component: ListaVotanteComponent },
 
   
 

@@ -1,7 +1,19 @@
+
+
+
+
+<!--copiar inicio-->
 <app-menu></app-menu>
-<app-sidenav></app-sidenav>
+<div class="container">
+  <div class="grid-container">
+    <div class="sidebar">
+      <app-sidenav></app-sidenav>
+    </div>
+<!--copiar Fin-->
 
 <div class = 'container'>
+  <h3 class="text-center">Lista de Cronograma</h3><br>
+
   <button class="btn btn-outline-success btn-block" style="width:150px" (click)="nuevo()" >Crear</button> 
   <br>
   <br>
@@ -23,9 +35,9 @@
             <td>{{cronograma.id}}</td>
             <td>{{cronograma.nombreCronograma}}</td>
 
-            <td><button class="btn btn-outline-primary" routerLink="/detalle/cronograma/{{cronograma.id}}"><i class="far fa-eye"></i> Ver</button></td>
-            <td *ngIf="isAdmin"><button class="btn btn-outline-warning" routerLink="/editar/cronograma/{{cronograma.id}}"><i class="far fa-edit"></i> Editar</button></td>
-            <td *ngIf="isAdmin"><button class="btn btn-outline-danger" (click)="borrar(cronograma.id)"><i class="far fa-trash-alt"></i> Eliminar</button></td>
+            <td><button class="btn btn-outline-primary" routerLink="/detalle/cronograma/{{cronograma.id}}"><i class="far fa-eye"></i></button></td>
+            <td *ngIf="isAdmin"><button class="btn btn-outline-warning" routerLink="/editar/cronograma/{{cronograma.id}}"><i class="far fa-edit"></i> </button></td>
+            <td *ngIf="isAdmin"><button class="btn btn-outline-danger" (click)="borrar(cronograma.id)"><i class="far fa-trash-alt"></i></button></td>
           </tr>
         </tbody>
       </table>
@@ -35,3 +47,8 @@
   <div class="p-3 mb-2 bg-dark custom-text-color text-center">{{listaVacia}}</div>
 </div>
 
+
+<!--copiar inicio-->
+  </div>
+</div>
+<!--copiar fin-->

@@ -1,45 +1,56 @@
+
+
+
+<!--copiar inicio-->
 <app-menu></app-menu>
-<app-sidenav></app-sidenav>
+<div class="container">
+  <div class="grid-container">
+    <div class="sidebar">
+      <app-sidenav></app-sidenav>
+    </div>
 
-<div class="container" *ngIf="tarea">
-    <div class="row mt-5">
-        <div class="col-md-4 mx-auto">
-            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
-
-                <div class="form-group">
-                    <label for="nomTarea">Nombre de la Tarea</label>
-                    <input type="text" class="form-control" id="nombreTarea" name="nombreTarea"
-                    [(ngModel)]="tarea.nombreTarea" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="descripcion">Descripcion</label>
-                    <input type="text" class="form-control" id="descripcion" name="descripcion"
-                    [(ngModel)]="tarea.descripcion" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="encargado">Encargado</label>
-                    <input type="text" class="form-control" id="encargado" name="encargado"
-                    [(ngModel)]="tarea.encargado" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="fechaInicio">Fecha de Inicio</label>
-                    <input type="date" class="form-control" id="fechaInicio" name="fechaInicio"
-                    [(ngModel)]="tarea.fechaInicio" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="fechaFinalizacion">Fecha de Finalización</label>
-                    <input type="date" class="form-control" id="fechaFinalizacion" name="fechaFinalizacion"
-                    [(ngModel)]="tarea.fechaFinalizacion" required>
-                </div>
-                
-                <button class="btn btn-outline-success btn-block" [disabled]="!f.valid">Actualizar</button>
-                <button class="btn btn-outline-primary btn-block" (click)="volver()"><i class="fas fa-arrow-alt-circle-left"></i> Volver</button>
-            </form>
+    <div class="container" *ngIf="tarea">
+        <div class="row mt-5">
+            <div class="col-md-4 mx-auto">
+                <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+    
+                    <div class="form-group">
+                        <label for="nomTarea">Nombre de la Tarea</label>
+                        <input type="text" class="form-control" id="nombreTarea" name="nombreTarea"
+                        [(ngModel)]="tarea.nombreTarea" required>
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="descripcion">Descripcion</label>
+                        <input type="text" class="form-control" id="descripcion" name="descripcion"
+                        [(ngModel)]="tarea.descripcion" required>
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="encargado">Encargado</label>
+                        <input type="text" class="form-control" id="encargado" name="encargado"
+                        [(ngModel)]="tarea.encargado" required>
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="fechaInicio">Fecha de Inicio</label>
+                        <input type="date" class="form-control" id="fechaInicio" name="fechaInicio"
+                        [(ngModel)]="tarea.fechaInicio" required>
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="fechaFinalizacion">Fecha de Finalización</label>
+                        <input type="date" class="form-control" id="fechaFinalizacion" name="fechaFinalizacion"
+                        [(ngModel)]="tarea.fechaFinalizacion" required>
+                    </div>
+                    
+                    <button class="btn btn-outline-success btn-block" [disabled]="!f.valid">Actualizar</button>
+                    <button class="btn btn-outline-primary btn-block" (click)="volver()"><i class="fas fa-arrow-alt-circle-left"></i> Volver</button>
+                </form>
+            </div>
         </div>
     </div>
+    
+  </div>
 </div>
-
+<!--copiar fin-->

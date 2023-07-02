@@ -1,20 +1,30 @@
-<app-menu></app-menu>
-<app-sidenav></app-sidenav>
 
+
+<!--copiar inicio-->
+<app-menu></app-menu>
 <div class="container">
-    <div class="row mt-5">
-        <div class="col-md-4 mx-auto">
-            <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
-                <div class="form-group">
-                    <label for="nombreCargo">Nombre del Cronograma</label>
-                    <input minlength="1" maxlength="20" type="text" class="form-control" id="nombreCronograma" name="nombreCronograma"
-                    [(ngModel)]="nombreCronograma" required>
-                </div>
-                       
-                <button type="submit" class="btn btn-outline-success btn-block" router-link="lista-cronograma" [disabled]="!f.valid">Crear</button>
-                <button class="btn btn-outline-primary btn-block" (click)="volver()"><i class="fas fa-arrow-alt-circle-left"></i> Volver</button>
-            </form>
-        </div>
+  <div class="grid-container">
+    <div class="sidebar">
+      <app-sidenav></app-sidenav>
+    </div>
+<!--copiar Fin-->
+
+<div class="row mt-5">
+    <div class="col-md-4 mx-auto">
+        <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+            <div class="form-group">
+                <label for="nombreCargo">Nombre del Cronograma</label>
+                <input minlength="1" maxlength="20" type="text" class="form-control" id="nombreCronograma" name="nombreCronograma"
+                [(ngModel)]="nombreCronograma" required>
+            </div>
+                   
+            <button type="submit" class="btn btn-outline-success btn-block" router-link="lista-cronograma" [disabled]="!f.valid">Crear</button>
+            <button class="btn btn-outline-primary btn-block" (click)="volver()"><i class="fas fa-arrow-alt-circle-left"></i> Volver</button>
+        </form>
     </div>
 </div>
 
+<!--copiar inicio-->
+  </div>
+</div>
+<!--copiar fin-->

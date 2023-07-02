@@ -11,6 +11,10 @@ export class TokenService {
     return this.getToken() !== null;
   }
 
+  isCandidate(): boolean {
+    return this.getToken() !== null;
+  }
+
   setToken(token: string): void {
     localStorage.setItem('token', token);
   }
@@ -47,6 +51,23 @@ export class TokenService {
       const valuesJson = JSON.parse(decodedPayload);
       const roles = valuesJson.roles;
       return roles.includes('administrador');
+    } catch (error) {
+      console.error('Error decoding token payload:', error);
+      return false;
+    }
+  }
+
+  isVoter(): boolean {
+    if (this.isLogged() && !this.isAdmin() && !this.isCandidate()) {
+      return false;
+    }
+    try {
+      const token = this.getToken();
+      const payload = token.split('.')[1];
+      const decodedPayload = atob(payload);
+      const valuesJson = JSON.parse(decodedPayload);
+      const roles = valuesJson.roles;
+      return roles.includes('votante');
     } catch (error) {
       console.error('Error decoding token payload:', error);
       return false;

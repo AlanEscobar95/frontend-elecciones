@@ -71,6 +71,7 @@ import { RegistroComponent } from './auth/registro.component';
 import { EditarUsuarioComponent } from './auth/editar-usuario.component';
 import { DetalleUsuarioComponent } from './auth/detalle-usuario.component';
 import { ListaUsuarioComponent } from './auth/lista-usuario.component';
+import { ListaVotanteComponent } from './lista-votante/lista-votante.component';
 
 @NgModule({
   declarations: [
@@ -115,7 +116,8 @@ import { ListaUsuarioComponent } from './auth/lista-usuario.component';
     SidenavComponent,
     ListaUsuarioComponent,
     EditarUsuarioComponent,
-    DetalleUsuarioComponent
+    DetalleUsuarioComponent,
+    ListaVotanteComponent
   ],
   imports: [
     BrowserModule,

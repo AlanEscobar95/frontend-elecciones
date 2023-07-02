@@ -1,69 +1,77 @@
+
+<!--copiar inicio-->
 <app-menu></app-menu>
-<app-sidenav></app-sidenav>
-
-<div class="container" *ngIf="usuario">
-    <div class="row mt-5">
-        <div class="col-md-4 mx-auto">
-            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
-
-                <div class="form-group">
-                    <label for="nombre">Nombre</label>
-                    <input type="text" class="form-control" id="nombre" name="nombre"
-                    [(ngModel)]="usuario.nombre" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="nombreRol">Rol del Usuario</label>
-                    <input type="text" class="form-control" id="nombreRol" name="nombreRol"
-                    [(ngModel)]="usuario.nombreRol" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="apellido">Apellido</label>
-                    <input type="text" class="form-control" id="apellido" name="apellido"
-                    [(ngModel)]="usuario.apellido" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="carrera">Carrera</label>
-                    <input type="text" class="form-control" id="carrera" name="carrera"
-                    [(ngModel)]="usuario.carrera" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="jornada">Jornada</label>
-                    <input type="text" class="form-control" id="jornada" name="jornada"
-                    [(ngModel)]="usuario.jornada" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="correo_electronico">Correo:</label>
-                    <input type="text" class="form-control" id="correo_electronico" name="correo_electronico"
-                    [(ngModel)]="usuario.correo_electronico" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="password">Contraseña</label>
-                    <input type="text" class="form-control" id="password" name="password"
-                    [(ngModel)]="usuario.password" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="estado_usuario">Estado</label>
-                    <input type="text" class="form-control" id="estado_usuario" name="estado_usuario"
-                    [(ngModel)]="usuario.estado_usuario" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="estado_voto">estado_voto</label>
-                    <input type="text" class="form-control" id="estado_voto" name="estado_voto"
-                    [(ngModel)]="usuario.estado_voto" required>
-                </div>
-                
-                <button class="btn btn-outline-success btn-block" [disabled]="!f.valid">Actualizar</button>
-                <button class="btn btn-outline-primary btn-block" (click)="volver()"><i class="fas fa-arrow-alt-circle-left"></i> Volver</button>
-            </form>
+<div class="container">
+  <div class="grid-container">
+    <div class="sidebar">
+      <app-sidenav></app-sidenav>
+    </div>
+    <div class="container" *ngIf="usuario">
+        <div class="row mt-5">
+            <div class="col-md-4 mx-auto">
+                <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+    
+                    <div class="form-group">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" class="form-control" id="nombre" name="nombre"
+                        [(ngModel)]="usuario.nombre" required>
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="nombreRol">Rol del Usuario</label>
+                        <input type="text" class="form-control" id="nombreRol" name="nombreRol"
+                        [(ngModel)]="usuario.nombreRol" required>
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="apellido">Apellido</label>
+                        <input type="text" class="form-control" id="apellido" name="apellido"
+                        [(ngModel)]="usuario.apellido" required>
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="carrera">Carrera</label>
+                        <input type="text" class="form-control" id="carrera" name="carrera"
+                        [(ngModel)]="usuario.carrera" required>
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="jornada">Jornada</label>
+                        <input type="text" class="form-control" id="jornada" name="jornada"
+                        [(ngModel)]="usuario.jornada" required>
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="correo_electronico">Correo:</label>
+                        <input type="text" class="form-control" id="correo_electronico" name="correo_electronico"
+                        [(ngModel)]="usuario.correo_electronico" required>
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="password">Contraseña</label>
+                        <input type="text" class="form-control" id="password" name="password"
+                        [(ngModel)]="usuario.password" required>
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="estado_usuario">Estado</label>
+                        <input type="text" class="form-control" id="estado_usuario" name="estado_usuario"
+                        [(ngModel)]="usuario.estado_usuario" required>
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="estado_voto">estado_voto</label>
+                        <input type="text" class="form-control" id="estado_voto" name="estado_voto"
+                        [(ngModel)]="usuario.estado_voto" required>
+                    </div>
+                    
+                    <button class="btn btn-outline-success btn-block" [disabled]="!f.valid">Actualizar</button>
+                    <button class="btn btn-outline-primary btn-block" (click)="volver()"><i class="fas fa-arrow-alt-circle-left"></i> Volver</button>
+                </form>
+            </div>
         </div>
     </div>
-</div>
 
+  </div>
+</div>
+<!--copiar fin-->

@@ -1,27 +1,34 @@
+
+<!--copiar inicio-->
 <app-menu></app-menu>
-<app-sidenav></app-sidenav>
-
 <div class="container">
-    <div class="row mt-5" *ngIf="lista">
-      <div class="col-md-4 mx-auto">
-          <div class="card" style="width: 18rem;">
-              <div class="card-header text-center">
-                Detalle
-              </div>
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item"><b>ID: </b>{{lista.id}}</li>
-                <li class="list-group-item"><b> Nombre de la Lista: </b>{{lista.nombreLista}}</li>
-                <li class="list-group-item"><b> Slogan: </b>{{lista.slogan}}</li>
-                <li class="list-group-item"><b> Propuestas: </b>{{lista.propuestas}}</li>
-                <li class="list-group-item"><b> Color: </b>{{lista.color}}</li>
-                <li class="list-group-item"><b> Número de Lista: </b>{{lista.numeroLista}}</li>
-                <li class="list-group-item"><b> Imagen: </b>{{lista.imagenLogo}}</li>
-              </ul>
-              <div class="card-footer">
-                  <button class="btn btn-outline-primary btn-block" (click)="volver()"><i class="fas fa-arrow-alt-circle-left"></i> Volver</button>
-              </div>
-            </div> 
-      </div>
+  <div class="grid-container">
+    <div class="sidebar">
+      <app-sidenav></app-sidenav>
+    </div>
+    <div class="container">
+      <div class="row mt-5" *ngIf="lista">
+        <div class="col-md-4 mx-auto">
+            <div class="card" style="width: 18rem;">
+                <div class="card-header text-center">
+                  Detalle
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item"><b>ID: </b>{{lista.id}}</li>
+                  <li class="list-group-item"><b> Nombre de la Lista: </b>{{lista.nombreLista}}</li>
+                  <li class="list-group-item"><b> Slogan: </b>{{lista.slogan}}</li>
+                  <li class="list-group-item"><b> Propuestas: </b>{{lista.propuestas}}</li>
+                  <li class="list-group-item"><b> Color: </b>{{lista.color}}</li>
+                  <li class="list-group-item"><b> Número de Lista: </b>{{lista.numeroLista}}</li>
+                  <li class="list-group-item"><b> Imagen: </b>{{lista.imagenLogo}}</li>
+                </ul>
+                <div class="card-footer">
+                    <button class="btn btn-outline-primary btn-block" (click)="volver()"><i class="fas fa-arrow-alt-circle-left"></i> Volver</button>
+                </div>
+              </div> 
+        </div>
+    </div>
+    </div>
   </div>
-  </div>
-
+</div>
+<!--copiar fin-->
