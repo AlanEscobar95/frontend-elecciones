@@ -1,4 +1,3 @@
-
 <!--copiar inicio-->
 <app-menu></app-menu>
 <div class="container">
@@ -10,59 +9,64 @@
         <div class="row mt-5">
             <div class="col-md-4 mx-auto">
                 <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
-    
+                    <div class="form-group text-center">
+                        <h1 for="nombreCargo">Login</h1>
+                        <img src="../../assets/Logo.png" width="150px" style="display: block; margin: 0 auto;">   <br>
+                      </div>
                     <div class="form-group">
                         <label for="nombre">Nombre</label>
                         <input type="text" class="form-control" id="nombre" name="nombre"
-                        [(ngModel)]="usuario.nombre" required>
+                        [(ngModel)]="usuario.nombre" maxlength="20" required>
                     </div>
     
                     <div class="form-group">
                         <label for="nombreRol">Rol del Usuario</label>
                         <input type="text" class="form-control" id="nombreRol" name="nombreRol"
-                        [(ngModel)]="usuario.nombreRol" required>
+                        [(ngModel)]="usuario.nombreRol"  maxlength="20" required>
                     </div>
     
                     <div class="form-group">
                         <label for="apellido">Apellido</label>
                         <input type="text" class="form-control" id="apellido" name="apellido"
-                        [(ngModel)]="usuario.apellido" required>
+                        [(ngModel)]="usuario.apellido" maxlength="20" required>
                     </div>
     
                     <div class="form-group">
                         <label for="carrera">Carrera</label>
                         <input type="text" class="form-control" id="carrera" name="carrera"
-                        [(ngModel)]="usuario.carrera" required>
+                        [(ngModel)]="usuario.carrera"  maxlength="20" required>
                     </div>
     
                     <div class="form-group">
                         <label for="jornada">Jornada</label>
                         <input type="text" class="form-control" id="jornada" name="jornada"
-                        [(ngModel)]="usuario.jornada" required>
+                        [(ngModel)]="usuario.jornada" maxlength="20" required>
                     </div>
     
                     <div class="form-group">
-                        <label for="correo_electronico">Correo:</label>
-                        <input type="text" class="form-control" id="correo_electronico" name="correo_electronico"
-                        [(ngModel)]="usuario.correo_electronico" required>
+                        <label for="correo_electronico">Email</label>
+                        <input type="email" class="form-control" name="correo_electronico" id="correo_electronico" required pattern=".+@.+" [(ngModel)]="usuario.correo_electronico" #correoInput="ngModel" [ngClass]="{ 'is-invalid': correoInput.invalid && correoInput.touched }" maxlength="50">
+                        <div class="invalid-feedback" *ngIf="correoInput.invalid && correoInput.touched">
+                          Por favor, ingrese un correo electrónico válido.
+                        </div>
                     </div>
     
                     <div class="form-group">
                         <label for="password">Contraseña</label>
                         <input type="text" class="form-control" id="password" name="password"
-                        [(ngModel)]="usuario.password" required>
+                        [(ngModel)]="usuario.password"   maxlength="20" required>
                     </div>
     
                     <div class="form-group">
                         <label for="estado_usuario">Estado</label>
                         <input type="text" class="form-control" id="estado_usuario" name="estado_usuario"
-                        [(ngModel)]="usuario.estado_usuario" required>
+                        [(ngModel)]="usuario.estado_usuario" value= "true" disabled>
                     </div>
     
                     <div class="form-group">
                         <label for="estado_voto">estado_voto</label>
                         <input type="text" class="form-control" id="estado_voto" name="estado_voto"
-                        [(ngModel)]="usuario.estado_voto" required>
+                        [(ngModel)]="usuario.estado_voto" value="false" disabled>
                     </div>
                     
                     <button class="btn btn-outline-success btn-block" [disabled]="!f.valid">Actualizar</button>

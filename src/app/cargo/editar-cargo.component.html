@@ -10,8 +10,10 @@
     <div class="row mt-5">
         <div class="col-md-4 mx-auto">
             <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
-
-                <div class="form-group">
+           
+                <div class="form-group text-center">
+                    <h1 for="nombreCargo">Cargo</h1>
+                    <img src="../../assets/Cargo.jpg" width="150px" style="display: block; margin: 0 auto;">   <br>
                     <label for="nomTarea">Nombre del Cargo</label>
                     <input type="text" class="form-control" id="nombreTarea" name="nombreTarea"
                     [(ngModel)]="cargo.nombreCargo" required>

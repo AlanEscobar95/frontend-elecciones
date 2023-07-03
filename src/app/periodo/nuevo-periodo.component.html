@@ -1,5 +1,3 @@
-
-
 <!--copiar inicio-->
 <app-menu></app-menu>
 <div class="container">
@@ -12,7 +10,12 @@
         <div class="row mt-5">
             <div class="col-md-4 mx-auto">
                 <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
-                    <div class="form-group">
+                  <div class="form-group text-center">
+                    <h1 for="nombrePeriodoLectivo">Periodo</h1>
+                    <img src="../../assets/Periodo.jpg" width="150px" style="display: block; margin: 0 auto;">
+                  </div>
+    
+                  <div class="form-group">
                         <label for="nombrePeriodoLectivo">Periodo</label>
                         <input minlength="1" maxlength="20" type="text" class="form-control" id="nombrePeriodoLectivo" name="nombrePeriodoLectivo"
                         [(ngModel)]="nombrePeriodoLectivo" required>

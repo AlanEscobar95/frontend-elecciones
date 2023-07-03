@@ -11,7 +11,10 @@
             <div class="col-md-4 mx-auto">
                 <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
     
-                    <div class="form-group">
+                  <div class="form-group text-center">
+                    <h1 for="nombreEstado">Estado</h1>
+                    <img src="../../assets/Estado.jpg" width="150px" style="display: block; margin: 0 auto;">
+                    <br>
                         <label for="nomTarea">Nombre del estado</label>
                         <input type="text" class="form-control" id="nombreTarea" name="nombreTarea"
                         [(ngModel)]="estado.nombreEstado" required>

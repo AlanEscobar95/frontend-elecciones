@@ -12,10 +12,12 @@
             <div class="col-md-4 mx-auto">
                 <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
     
-                    <div class="form-group">
+                  <div class="form-group text-center">
+                    <h1 for="nombreCarrera">Carrera</h1>
+                    <img src="../../assets/Carrera.jpg" width="150px" style="display: block; margin: 0 auto;">   <br>
                         <label for="nombreCarrera">Nombre de la Carrera</label>
                         <input type="text" class="form-control" id="nombreCarrera" name="nombreCarrera"
-                        [(ngModel)]="carrera.nombreCarrera" required>
+                        [(ngModel)]="carrera.nombreCarrera" maxlength="40" required>
                     </div>
                     <button class="btn btn-outline-success btn-block" [disabled]="!f.valid">Actualizar</button>
                     <button class="btn btn-outline-primary btn-block" (click)="volver()"><i class="fas fa-arrow-alt-circle-left"></i> Volver</button>

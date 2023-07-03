@@ -12,11 +12,13 @@
         <div class="row mt-5">
             <div class="col-md-4 mx-auto">
                 <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
-                    <div class="form-group">
-                        <label for="nombreCarrera">Nombre Carrera</label>
-                        <input minlength="1" maxlength="20" type="text" class="form-control" id="nombreCarrera" name="nombreCarrera"
-                        [(ngModel)]="nombreCarrera" required>
-                    </div>
+
+                  <div class="form-group text-center">
+                    <h1 for="nombreCarrera">Carrera</h1>
+                    <img src="../../assets/Carrera.jpg" width="150px" style="display: block; margin: 0 auto;">
+                    <input minlength="1" maxlength="20" type="text" class="form-control" id="nombreCarrera" name="nombreCarrera"
+                           [(ngModel)]="nombreCarrera" maxlength="40" requiredrequired>
+                  </div>
                            
                     <button type="submit" class="btn btn-outline-success btn-block" router-link="lista-carrera" [disabled]="!f.valid">Crear</button>
                     <button class="btn btn-outline-primary btn-block" (click)="volver()"><i class="fas fa-arrow-alt-circle-left"></i> Volver</button>

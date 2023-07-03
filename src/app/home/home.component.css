@@ -2,9 +2,15 @@
     display: flex;
     justify-content: center;
   }
-  
-  .grid-container {
-    display: grid;
+
+  .card-title1 {
+    font-family: 'Flamenco', cursive;
+    color: white;
+    z-index: 1;
+    position: absolute;
+    font-size: 130px;
+    font-weight: bold;
+    text-align: center;
   }
 
   .blur-img {
@@ -22,13 +28,7 @@
   
   }
   
-  .card-title1 {
-    font-family: 'Flamenco', cursive;
-    color: rgb(255, 255, 255);
-    font-size: 150px;
-    font-weight: bold;
-    text-align: center;
-  }
+  
   
   .card-title2 {
     font-family: 'Flamenco', cursive;
@@ -150,14 +150,9 @@
   .custom-height {
     height: 20px; /* Puedes ajustar el valor según tus necesidades */
   }
-  .card {
-    position: relative; /* Establece la posición relativa para el contenedor */
-  }
   
-  .card-img-top {
-    height: 250px; /* Ajusta el valor según tus necesidades */
-    object-fit: scale-down; /* Ajusta la forma en que la imagen se ajusta dentro del contenedor */
-  }
+  
+  
   
   /*=================boton transparente=============*/
   .transparent-link {

@@ -1,3 +1,5 @@
+
+
 <!--copiar inicio-->
 <app-menu></app-menu>
 <div class="container">
@@ -5,25 +7,27 @@
     <div class="sidebar">
       <app-sidenav></app-sidenav>
     </div>
-<!--copiar Fin-->
-<div class="container">
-    <div class="row mt-5">
-        <div class="col-md-4 mx-auto">
-            <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
-                <div class="form-group">
-                    <label for="nombreCargo">Nombre Cargo</label>
+
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-md-4 mx-auto">
+              <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+                
+                <div class="form-group text-center">
+                    <h1 for="nombreCargo">Cargo</h1>
+                    <img src="../../assets/Cargo.jpg" width="150px" style="display: block; margin: 0 auto;">   <br>
                     <input minlength="1" maxlength="20" type="text" class="form-control" id="nombreCargo" name="nombreCargo"
-                    [(ngModel)]="nombreCargo" required>
-                </div>
-                       
+                           [(ngModel)]="nombreCargo" required>
+                  </div>
+
                 <button type="submit" class="btn btn-outline-success btn-block" router-link="lista-cargo" [disabled]="!f.valid">Crear</button>
                 <button class="btn btn-outline-primary btn-block" (click)="volver()"><i class="fas fa-arrow-alt-circle-left"></i> Volver</button>
             </form>
+            </div>
         </div>
     </div>
-</div>
-<!--copiar inicio-->
-</div>
+
+  </div>
 </div>
 <!--copiar fin-->
 <app-footer></app-footer>

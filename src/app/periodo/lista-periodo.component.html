@@ -1,8 +1,3 @@
-
-<div class='container' *ngIf="listaVacia">
-  <div class="p-3 mb-2 bg-dark custom-text-color text-center">{{listaVacia}}</div>
-</div>
-
 <!--copiar inicio-->
 <app-menu></app-menu>
 <div class="container">
@@ -13,10 +8,12 @@
 <!--copiar Fin-->
 <div class='container'>
   <h3 class="text-center">Lista de Periodos</h3><br>
-
   <button class="btn btn-outline-success btn-block" style="width:150px" (click)="nuevo()">Crear</button>
   <br>
   <br>
+  <div class='container' *ngIf="listaVacia">
+    <div class="p-3 mb-2 bg-dark custom-text-color text-center">{{listaVacia}}</div>
+  </div>
 </div>
 
 <div class = 'container' *ngIf="!listaVacia" >

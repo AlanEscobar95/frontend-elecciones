@@ -26,9 +26,11 @@ export class NuevaListaComponent {
     ) { }
 
   isLogged: boolean;
+  isCandidate: boolean;
 
   ngOnInit() {
     this.isLogged=this.tokenService.isLogged();
+    this.isCandidate=this.tokenService.isCandidate();
   }
 
   onCreate(): void {

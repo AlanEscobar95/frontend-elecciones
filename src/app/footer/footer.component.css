@@ -9,6 +9,14 @@ body {
     width: 100%;
     text-align: center;
     font-size: 12px;
-    width: 100%;
 
   }
+  html, body {
+    height: 0%;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+  

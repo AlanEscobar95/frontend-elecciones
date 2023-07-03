@@ -16,123 +16,110 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
-
-
-
 </head>
 <!--copiar inicio-->
-<app-menu></app-menu>
-<div class="container">
-  <div class="grid-container">
-    <div class="sidebar">
-      <app-sidenav></app-sidenav>
+
+<div class="container-fluid">
+  <app-menu></app-menu>
+  <app-sidenav></app-sidenav>
+  <div class="row">
+    <div class="p-0">
+      <h1 class="card-title1" style="margin-top: 60px; margin-left: 200px;" *ngIf="nombre">Bienvenido {{nombre}}</h1>
+      <img src="../assets/yavirac2.png" class="blur-img" alt="Imagen de ancho completo">
+    </div>
+  </div>
+</div>
+<br>
+<div class="bg-dark" style="color:white; text-align: center; margin: 0 35px 0 35px;">
+  <br>
+  <h3>El voto es un derecho que nada ni nadie puede quitar a los estudiantes <br>(Jean-Jacques Rousseau) </h3>
+  <br>
+</div>
+<div class="container-fluid d-flex justify-content-center">
+  <div class="card" style="max-width: 80%; text-align: center">
+    <!-- Modifica el valor de max-width según tus necesidades -->
+    <div class="row">
+      <div class="col-md-4">
+        <img src="../assets/yavivote.jpg" class="img-fluid rounded-start" alt="...">
+
+      </div>
+
+      <div class="col-md-8">
+
+        <div class="card-body">
+          <h5 class="card-title2">YaviVote</h5>
+          <div class="d-flex justify-content-center">
+            <hr>
+          </div>
+          <p class="card-text">YaviVote Es un sistema de votaciones creado por los estudiantes de la
+            carrera
+            de desarrollo de Software con el fin de facilitar y sitematizar el proceso de votaciones
+            del instituto
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<br>
+<div class="bg-dark" style="color:white; text-align: center; margin: 0 35px 0 35px;">
+  <h3>Una papeleta de voto es más fuerte que una bala de fusil <br>(Abraham Lincoln) </h3>
+</div>
+
+<div class="container-fluid">
+  <div class="row">
+
+    <div class="col-10 col-lg-4">
+      <div class="card">
+        <img src="../../assets/Portada-software-de-votacion.jpg" class="card-img-top" alt="...">
+        <div class="card-body1">
+          <h5 class="card-title3">Un sistema de calidad</h5>
+          <hr style="text-align: center;">
+          <p class="card-text1">El sistema es de calidad y con una interfaz muy limpia</p>
+        </div>
+      </div>
     </div>
 
 
-      <div class="container-fluid d-flex justify-content-center ;"  >
-        <div class="row">
-          <div style="text-align: center" >
-            <h2 style="color:black " *ngIf="nombre">Bienvenido {{nombre}} </h2>
-            <div class="button-container">
-              <a class="nav-link transparent-link" routerLink="/lista-votante" *ngIf="isVoter">
-                <h3>VOTAR</h3>
-              </a>
-            </div>
+    <div class="col-10 col-lg-4">
+      <div class="card">
+        <img src="../assets/Elecciones-Blockchain-Se-podria-votar-online-bit2meacademy.png" class="card-img-top"
+          alt="...">
+        <div class="card-body2">
+          <h5 class="card-title4">Un sistema
+            <br> Seguro
+          </h5>
+          <div class="d-flex justify-content-center">
+            <hr>
           </div>
-          <div class="col-12 p-12">
-            <img src="../../assets/yavirac2.png" class="blur-img" alt="Imagen de ancho completo">
-          </div>
-        
+          <p class="card-text2">El sistema es seguro y sobre todo secreto en el momento de las votaciones
+          </p>
         </div>
       </div>
-      <br>
-      <div class="bg-dark"  style="color:white; text-align: center; padding: 20px;" >
-        <h3 >El voto es un derecho que nada ni nadie puede quitar a los estudiantes <br>(Jean-Jacques Rousseau) </h3>
-      </div>
-      <div class="container-fluid d-flex justify-content-center">
-        <div class="card" style="max-width: 80%; text-align: center">
-          <!-- Modifica el valor de max-width según tus necesidades -->
-          <div class="row">
-            <div class="col-md-4">
-              <img src="../assets/yavivote.jpg" class="img-fluid rounded-start" alt="...">
+    </div>
 
-            </div>
 
-            <div class="col-md-8">
 
-              <div class="card-body">
-                <h5 class="card-title2">YaviVote</h5>
-                <div class="d-flex justify-content-center">
-                  <hr>
-                </div>
-                <p class="card-text">YaviVote Es un sistema de votaciones creado por los estudiantes de la
-                  carrera
-                  de desarrollo de Software con el fin de facilitar y sitematizar el proceso de votaciones
-                  del instituto
-                </p>
-              </div>
-            </div>
+    <div class="col-10 col-lg-4">
+      <div class="card">
+        <img src="../assets/usabilidad-web.jpg" class="card-img-top" alt="...">
+        <div class="card-body3">
+          <h5 class="card-title5">Un sistema
+            <br> intuitivo
+          </h5>
+          <div class="d-flex justify-content-center">
+            <hr>
           </div>
+          <p class="card-text3">El sistema es muy intuitivo y nada complicado de usar</p>
         </div>
       </div>
+    </div>
 
-      <br>
-      <div class="bg-dark" style="color:white; text-align: center; padding: 50px;" >
-        <h3 >Una papeleta de voto es más fuerte que una bala de fusil <br>(Abraham Lincoln) </h3>
-      </div>
+  </div>
+</div>
 
-      <div class="container-fluid">
-        <div class="row">
-
-          <div class="col-10 col-lg-4">
-            <div class="card">
-              <img src="../../assets/Portada-software-de-votacion.jpg" class="card-img-top" alt="...">
-              <div class="card-body1">
-                <h5 class="card-title3">Un sistema de calidad</h5>
-                <hr style="text-align: center;">
-                <p class="card-text1">El sistema es de calidad y con una interfaz muy limpia</p>
-              </div>
-            </div>
-          </div>
-
-
-          <div class="col-10 col-lg-4">
-            <div class="card">
-              <img src="../assets/Elecciones-Blockchain-Se-podria-votar-online-bit2meacademy.png" class="card-img-top"
-                alt="...">
-              <div class="card-body2">
-                <h5 class="card-title4">Un sistema
-                  <br> Seguro
-                </h5>
-                <div class="d-flex justify-content-center">
-                  <hr>
-                </div>
-                <p class="card-text2">El sistema es seguro y sobre todo secreto en el momento de las votaciones
-                </p>
-              </div>
-            </div>
-          </div>
-
-
-
-          <div class="col-10 col-lg-4">
-            <div class="card">
-              <img src="../assets/usabilidad-web.jpg" class="card-img-top" alt="...">
-              <div class="card-body3">
-                <h5 class="card-title5">Un sistema
-                  <br> intuitivo
-                </h5>
-                <div class="d-flex justify-content-center">
-                  <hr>
-                </div>
-                <p class="card-text3">El sistema es muy intuitivo y nada complicado de usar</p>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-       <br>
-   <br>
-    <!--copiar fin-->
-    <app-footer></app-footer>
+<br>
+<br>
+<!--copiar fin-->
+<app-footer></app-footer>

@@ -1,8 +1,4 @@
-.container {
-  display: flex;
-  justify-content: center;
-}
 
-.grid-container {
-  display: grid;
+.custom-text-color {
+  color: white;
 }

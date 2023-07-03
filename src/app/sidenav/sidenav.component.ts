@@ -14,6 +14,7 @@ export class SidenavComponent implements OnInit {
   isVoter: boolean;
   isCandidate: boolean;
   nombre: string;
+  nombreRol: string;
 
 
   constructor(private tokenService: TokenService, private router: Router) {}
@@ -23,9 +24,9 @@ export class SidenavComponent implements OnInit {
     this.isLogged = this.tokenService.isLogged();
     this.isAdmin = this.tokenService.isAdmin();
     this.isVoter = this.tokenService.isVoter();
-    this.isVoter = this.tokenService.isCandidate();
+    this.isCandidate = this.tokenService.isCandidate();
     this.nombre = this.tokenService.getNombreUsuario();
-
+    this.nombreRol = this.tokenService.getNombreRol();
  }
   logOut(): void {
    this.tokenService.logOut();

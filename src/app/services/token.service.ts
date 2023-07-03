@@ -11,10 +11,6 @@ export class TokenService {
     return this.getToken() !== null;
   }
 
-  isCandidate(): boolean {
-    return this.getToken() !== null;
-  }
-
   setToken(token: string): void {
     localStorage.setItem('token', token);
   }
@@ -34,6 +30,23 @@ export class TokenService {
       const valuesJson = JSON.parse(decodedPayload);
       const nombre = valuesJson.nombre;
       return nombre;
+    } catch (error) {
+      console.error('Error decoding token payload:', error);
+      return null;
+    }
+  }
+
+  getNombreRol(): string | null { 
+    if (!this.isLogged()) { 
+      return null;
+    }
+    try {
+      const token = this.getToken();
+      const payload = token.split('.')[1];
+      const decodedPayload = atob(payload);
+      const valuesJson = JSON.parse(decodedPayload);
+      const nombreRol = valuesJson.nombreRol;
+      return nombreRol;
     } catch (error) {
       console.error('Error decoding token payload:', error);
       return null;
@@ -68,6 +81,23 @@ export class TokenService {
       const valuesJson = JSON.parse(decodedPayload);
       const roles = valuesJson.roles;
       return roles.includes('votante');
+    } catch (error) {
+      console.error('Error decoding token payload:', error);
+      return false;
+    }
+  }
+
+  isCandidate(): boolean {
+    if (!this.isLogged()) {
+      return false;
+    }
+    try {
+      const token = this.getToken();
+      const payload = token.split('.')[1];
+      const decodedPayload = atob(payload);
+      const valuesJson = JSON.parse(decodedPayload);
+      const roles = valuesJson.roles;
+      return roles.includes('candidato');
     } catch (error) {
       console.error('Error decoding token payload:', error);
       return false;

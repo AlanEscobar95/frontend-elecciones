@@ -16,6 +16,7 @@ export class ListaVotanteComponent {
   listas: Lista[] = [];
   listaVacia = undefined;
   isVoter: boolean;
+  isLogged: boolean;
   
   constructor(
     private listaService: ListaService,
@@ -27,6 +28,7 @@ export class ListaVotanteComponent {
 
   ngOnInit(): void {
     this.cargarListas();
+    this.isLogged=this.tokenService.isLogged();
     this.isVoter = this.tokenService.isVoter();
   }
 

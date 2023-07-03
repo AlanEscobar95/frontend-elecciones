@@ -71,6 +71,6 @@ export class ListaCargoComponent implements OnInit {
   })
     }
     nuevo(): void {
-      this.router.navigate(['/nuevo-usuario']);
+      this.router.navigate(['/nuevo-cargo']);
     }
 }

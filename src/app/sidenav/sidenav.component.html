@@ -11,7 +11,7 @@
             <br>
             <ul>
                 <li>
-                    <h4 style="color:white; margin-left: 80px;">USUARIO</h4>
+                    <h4 style="color:white; margin-left: 60px;" *ngIf="nombreRol">{{nombreRol}}</h4>
                 </li>
             </ul>
             <ul>
@@ -78,7 +78,7 @@
                     <a class="nav-link" routerLink="/registro" *ngIf="isAdmin">
                         <i class="fa fa-male fa-2x"></i>
                         <span class="nav-text">
-                            Registrar Candidato
+                            Registrar Candidatos
                         </span>
                     </a>
                 </li>
@@ -87,22 +87,6 @@
                         <i class="fa fa-male fa-2x"></i>
                         <span class="nav-text">
                             Registrar Votantes
-                        </span>
-                    </a>
-                </li>
-                <li>
-                    <a class="nav-link" routerLink="/subir-votante" *ngIf="isAdmin">
-                        <i class="fa fa-cloud-upload fa-2x"></i>
-                        <span class="nav-text">
-                            Subir Votante
-                        </span>
-                    </a>
-                </li>
-                <li>
-                    <a class="nav-link" routerLink="/listar-lista" *ngIf="isAdmin">
-                        <i class="fa fa-users fa-2x"></i>
-                        <span class="nav-text">
-                            Registros de Listas
                         </span>
                     </a>
                 </li>
@@ -131,16 +115,6 @@
                         </span>
                     </a>
                   </li>
-               
-                  <li>
-                    <a class="nav-link" routerLink="/lista-estado" *ngIf="isAdmin">
-                        <i class="fa fa-list-alt fa-2x"></i> 
-                        <span class="nav-text">
-                            Lista Estado
-                        </span>
-                    </a>
-                  </li>
-          
           
                   <li>
                     <a class="nav-link" routerLink="/lista-usuario" *ngIf="isAdmin">

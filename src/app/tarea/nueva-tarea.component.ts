@@ -59,4 +59,9 @@ export class NuevaTareaComponent {
     return fechaInicio >= fechaActual;
   }
 
+  validarFechaFinalizacion() {
+    const fechaActual = new Date();
+    const fechaFinalizacion = new Date(this.fechaFinalizacion);
+    return fechaFinalizacion >= fechaActual;
+  }
 }

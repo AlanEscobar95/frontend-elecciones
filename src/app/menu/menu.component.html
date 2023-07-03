@@ -1,112 +1,33 @@
 <section>
-  <h1> 
+  <h1>
     <img src="../../assets/Yavirac.png" width="110px" style="margin-right: 10px;">
-    <strong>  Y a v i - V o t e!  </strong> 
+    <strong> Y a v i - V o t e! </strong>
     <img src="../../assets/Logo.png" alt="imagen" width="100px">
   </h1>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 
-  <div class="ml-auto center-image">
-  </div>
-  <div class="ml-auto" style="margin-right: 90px;">
+    <div class="ml-auto center-image">
+    </div>
+    <div class="ml-auto" style="margin-right: 90px;">
 
-    <button class="btn btn-outline-danger" *ngIf="isAdmin" (click)="logOut()"><i
-        class="fas fa-sign-in-alt"></i>Salir</button>
-    <button class="btn btn-outline-danger" *ngIf="isVoter" (click)="logOut()"><i
-        class="fas fa-sign-in-alt"></i>Salir</button>
-  <button class="btn btn-outline-success" routerLink="/login" *ngIf="!isLogged"><i class="fas fa-sign-in-alt"></i>Iniciar Sesión</button>
+      <button class="btn btn-outline-danger" *ngIf="isLogged" (click)="logOut()"><i
+          class="fas fa-sign-in-alt"></i>Salir</button>
 
-  </div>
+      <button class="btn btn-outline-success" routerLink="/login" *ngIf="!isLogged"><i
+          class="fas fa-sign-in-alt"></i>Iniciar Sesión</button>
 
-</nav>
+    </div>
+
+  </nav>
 </section>
 
 
 <form class="form-inline my-2 my-lg-0">
-  <!--<button class="btn btn-outline-success" routerLink="/login" *ngIf="!isLogged"><i class="fas fa-sign-in-alt"></i>Iniciar Sesión</button>
-    
-        <button class="btn btn-outline-danger" *ngIf="isLogged" (click)="logOut()"><i class="fas fa-sign-in-alt"></i>Cerrar sesión</button> -->
 </form>
 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
   aria-expanded="false" aria-label="Toggle navigation">
   <span class="navbar-toggler-icon"></span>
 </button>
 
-
-
-
-
-
-
-<!--
-    <div class="collapse navbar-collapse" id="navbarNav">
-      
-      <ul class="navbar-nav mr-auto">
-       
-        <li class="nav-item">
-            <a class="nav-link" routerLink="/"><i class="fas fa-home"></i> Inicio</a>
-          </li>
-  
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/lista" *ngIf="isAdmin"><i class="far fa-list-alt"></i> Lista de Tareas</a>
-        </li>
-        
-     
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/lista-cargo" *ngIf="isAdmin"><i class="far fa-list-alt"></i> Lista de Cargos</a>
-       
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/lista-carrera" *ngIf="isAdmin"><i class="far fa-list-alt"></i> Lista de Carreras</a>
-        </li>
- 
-        <li class="nav-items">
-          <a class="nav-link" routerLink="/registro" *ngIf="isAdmin"><i class="fas fa-user-plus"></i>Crear Usuarios</a>
-        </li>
-
-        <li class="nav-items">
-          <a class="nav-link" routerLink="/lista-votante" *ngIf="isVoter"><i class="fas fa-user-plus"></i>Listas</a>
-        </li>
-        
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/subir-votante" *ngIf="isAdmin"><i class="far fa-list-alt"></i> Subir Votante</a>
-        </li>
-        
-        
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/lista-cronograma" *ngIf="isAdmin"><i class="far fa-list-alt" ></i> Cronograma</a>
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/lista-periodo" *ngIf="isAdmin"><i class="far fa-list-alt"></i> Periodos </a>
-        </li>
-        
-       
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/lista-tipo-lista" *ngIf="isAdmin"><i class="far fa-list-alt" ></i> Tipos de Listas</a>
-        </li>
-
-        
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/listar-lista" *ngIf="isLogged"><i class="far fa-list-alt"></i> Registros de Listas</a>
-        </li>
-     
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/lista-estado" *ngIf="isLogged"><i class="far fa-list-alt"></i> Lista Estado</a>
-        </li>
-
-
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/lista-usuario" *ngIf="isLogged"><i class="far fa-list-alt"></i> Lista de Usuarios</a>
-        </li>
-
-      
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/login" *ngIf="!isLogged"><i class="far fa-list-alt" ></i> Login</a>
-        </li>
-
-      </ul>
-   
-    
-    </div>
-        -->
+-
