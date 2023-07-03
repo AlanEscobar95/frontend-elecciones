@@ -9,16 +9,19 @@
 <!--copiar Fin-->
     <div class="content">
       <!-- PANTALLA DE BIENVENIDA -->
-        <h1 class="display-4" *ngIf="!nombre">Hello, world!</h1>
-        <h1 class="display-4" *ngIf="nombre">Hello, {{nombre}}</h1>
-        <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+        <h1 class="display-4" *ngIf="!nombre">Sistema de Votaciones!</h1>
+        <h1 class="display-4" *ngIf="nombre">Bienvenido, {{nombre}} </h1>
+        <p class="lead">Ingresa tu voto</p>
         <hr class="my-4">
-        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-      <!-- PANTALLA DE BIENVENIDA -->
+        <a class="btn btn-primary btn-lg"  routerLink="/lista-votante" *ngIf="isVoter">
+          <i class="fa fa-user-plus fa-2x"></i>
+              Ver Listas y Candidatos
+      </a>
     </div>
 <!--copiar inicio-->
 
   </div>
+  
 </div>
 <!--copiar fin-->
+<app-footer></app-footer>

@@ -13,7 +13,8 @@ export const environment = {
   estadoURL:'http://localhost:3000/estados/',
   tipoListaURL:'http://localhost:3000/tipo-listas/',
   usuarioURL:'http://localhost:3000/usuario/',
-  listaURL:'http://localhost:3000/listas/'
+  listaURL:'http://localhost:3000/listas/',
+  votosURL:'http://localhost:3000/votos/'
 };
 
 /*

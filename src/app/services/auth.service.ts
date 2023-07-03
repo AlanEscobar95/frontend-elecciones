@@ -41,4 +41,8 @@ export class AuthService {
     return this.httpClient.post<any>(this.authURL + 'nuevo', dto);
   }
 
+  registroVotante(dto: NuevoUsuarioDto): Observable<any> {
+    return this.httpClient.post<any>(this.authURL + 'nuevo/votante', dto);
+  }
+
 }

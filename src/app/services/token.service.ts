@@ -58,7 +58,7 @@ export class TokenService {
   }
 
   isVoter(): boolean {
-    if (this.isLogged() && !this.isAdmin() && !this.isCandidate()) {
+    if (!this.isLogged()) {
       return false;
     }
     try {

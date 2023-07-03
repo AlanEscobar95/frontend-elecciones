@@ -42,6 +42,7 @@ import { DetalleUsuarioComponent } from './auth/detalle-usuario.component';
 import { EditarUsuarioComponent } from './auth/editar-usuario.component';
 import { ListaUsuarioComponent } from './auth/lista-usuario.component';
 import { ListaVotanteComponent } from './lista-votante/lista-votante.component';
+import { RegistroVotanteComponent } from './auth/registro-votante/registro-votante.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -52,8 +53,7 @@ const routes: Routes = [
   {path: 'editar/:id', component: EditarTareaComponent,canActivate: [CronogramaGuard],  data: { expectedRol: 'administrador' }},
   {path: 'login', component: LoginComponent,canActivate:[LoginGuard]},
   {path: 'registro', component: RegistroComponent,canActivate:[CronogramaGuard],  data: { expectedRol: 'administrador' }},
-
-
+  {path: 'registroVotante',component:RegistroVotanteComponent},
   
   /*CARGOS*/
   {path: 'detalle/cargo/:id', component: DetalleCargoComponent },

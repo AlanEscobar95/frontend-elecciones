@@ -72,6 +72,8 @@ import { EditarUsuarioComponent } from './auth/editar-usuario.component';
 import { DetalleUsuarioComponent } from './auth/detalle-usuario.component';
 import { ListaUsuarioComponent } from './auth/lista-usuario.component';
 import { ListaVotanteComponent } from './lista-votante/lista-votante.component';
+import { FooterComponent } from './footer/footer.component';
+import { RegistroVotanteComponent } from './auth/registro-votante/registro-votante.component';
 
 @NgModule({
   declarations: [
@@ -117,7 +119,9 @@ import { ListaVotanteComponent } from './lista-votante/lista-votante.component';
     ListaUsuarioComponent,
     EditarUsuarioComponent,
     DetalleUsuarioComponent,
-    ListaVotanteComponent
+    ListaVotanteComponent,
+    FooterComponent,
+    RegistroVotanteComponent
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,4 @@
 export class LoginUsuarioDto{
-   
     nombreRol: string;
 
     nombre: string;

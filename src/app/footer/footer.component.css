@@ -1,0 +1,17 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+  
+  footer {
+    background-color: #2F2E38;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    font-size: 12px;
+    margin-top: auto;
+  }

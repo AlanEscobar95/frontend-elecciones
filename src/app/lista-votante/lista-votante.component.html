@@ -1,16 +1,31 @@
-<app-menu></app-menu>
 
-<div class="row">
-    <div class="col-sm-6" *ngFor="let item of listas">
-      <div class="card">
-        <div class="card-body" *ngFor="let lista of listas">
-          <h3 class="card-title text-center">{{lista.nombreLista}}</h3>
-          <h5 class="card-title">Color:{{lista.color}}</h5>
-           <img src="{{lista.imagenLogo}}" width="150px" height="150px" style="border-radius: 10px;">
-          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+<!--copiar inicio-->
+<app-menu></app-menu>
+<div class="container">
+  <div class="grid-container">
+    <div class="sidebar">
+      <app-sidenav></app-sidenav>
+    </div>
+    <div class="row">
+      <div class="col-sm-6" *ngFor="let lista of listas">
+        <div class="card">
+          <div class="card-body">
+            <h3 class="card-title text-center">{{lista.nombreLista}}</h3>
+            <div class="text-center">
+              <img src="{{lista.imagenLogo}}" width="150px" height="150px" style="border-radius: 10px;">
+            </div><br>
+            <p>Slogan: {{lista.slogan}}</p>
+            <p>Propuestas: {{lista.propuestas}}</p>
+            <p>Número de la Lista: {{lista.numeroLista}} </p>
+            <p>Color: <span [style.background-color]="lista.color" class="lista-color"></span></p>
+            <div class="text-center">
+              <a href="#" class="btn btn-outline-primary btn-lg btn-block" (click)="votar(lista.id)">Votar</a>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-
- 
+  </div>
+  </div>
+</div>
+<!--copiar fin-->
+<app-footer></app-footer>

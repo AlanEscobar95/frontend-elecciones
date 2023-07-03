@@ -1,28 +1,45 @@
-
 <section>
-  <h1><strong>Y a v i - V o t e!  </strong> <img src="https://ve.uptc.edu.co/SiVotoElectronicoFrontEnd/assets/img/voto.png" alt="imagen" width="40px"></h1>
+  <h1> 
+    <img src="https://yavirac.edu.ec/img/Logo%20Yavirac.png" width="120px" style="margin-right: 20px;">
+    <strong>  Y a v i - V o t e!  </strong> 
+    <img src="https://ve.uptc.edu.co/SiVotoElectronicoFrontEnd/assets/img/voto.png" alt="imagen" width="60px">
+  </h1>
 </section>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 
-  <div class="ml-auto">
-    <img src="https://yavirac.edu.ec/img/Logo%20Yavirac.png" width="120px" style="margin-right: 150px;" >
+  <div class="ml-auto center-image">
   </div>
+  <div class="ml-auto" style="margin-right: 90px;">
 
-  <!-- Resto del código del nav... -->
+    <button class="btn btn-outline-danger" *ngIf="isAdmin" (click)="logOut()"><i
+        class="fas fa-sign-in-alt"></i>Salir</button>
+    <button class="btn btn-outline-danger" *ngIf="isVoter" (click)="logOut()"><i
+        class="fas fa-sign-in-alt"></i>Salir</button>
+  <button class="btn btn-outline-success" routerLink="/login" *ngIf="!isLogged"><i class="fas fa-sign-in-alt"></i>Iniciar Sesión</button>
+
+  </div>
 
 </nav>
 
 
-  <form class="form-inline my-2 my-lg-0">
-    <button class="btn btn-outline-success" routerLink="/login" *ngIf="!isLogged"><i class="fas fa-sign-in-alt"></i>Iniciar Sesión</button>
+<form class="form-inline my-2 my-lg-0">
+  <!--<button class="btn btn-outline-success" routerLink="/login" *ngIf="!isLogged"><i class="fas fa-sign-in-alt"></i>Iniciar Sesión</button>
     
-      <button class="btn btn-outline-danger" *ngIf="isLogged" (click)="logOut()"><i class="fas fa-sign-in-alt"></i>Cerrar sesión</button> 
-  </form>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-       <!--
+        <button class="btn btn-outline-danger" *ngIf="isLogged" (click)="logOut()"><i class="fas fa-sign-in-alt"></i>Cerrar sesión</button> -->
+</form>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+  aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+</button>
+
+
+
+
+
+
+
+<!--
     <div class="collapse navbar-collapse" id="navbarNav">
       
       <ul class="navbar-nav mr-auto">
@@ -93,6 +110,3 @@
     
     </div>
         -->
-  
-
-  

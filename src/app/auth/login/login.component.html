@@ -1,11 +1,22 @@
-
+<section>
+    <h1> <img src="https://yavirac.edu.ec/img/Logo%20Yavirac.png" width="120px" style="margin-right: 20px;">
+      <strong>  Y a v i - V o t e!  </strong> <img src="https://ve.uptc.edu.co/SiVotoElectronicoFrontEnd/assets/img/voto.png"
+        alt="imagen" width="60px">
+    </h1>
+  </section>
+  <div style="margin-right: 20px;">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="height:60px; ">
+  <h3 >Iniciar Sesión</h3>
+  </nav>
+</div> 
 <!--copiar inicio-->
-<app-menu></app-menu>
+
+
+
+
+
 <div class="container">
   <div class="grid-container">
-    <div class="sidebar">
-      <app-sidenav></app-sidenav>
-    </div>
     <div class="container d-flex justify-content-center">
         <div class="card ">
             <div class="car-header">
@@ -27,7 +38,7 @@
                             <option *ngFor="let rol of roles" [value]="rol">{{ rol }}</option>
                           </select>
                       </div>
-    
+                 
                     <div class="form-group">
                         <label for="correo">Correo Electrónico</label>
                         <input type="email" class="form-control" name="correo" id="correo" required pattern=".+@.+" [(ngModel)]="correo" #correoInput="ngModel" [ngClass]="{ 'is-invalid': correoInput.invalid && correoInput.touched }" maxlength="50">
@@ -43,7 +54,7 @@
                     </div>
                     <div class="form-group">
                         <button class="btn btn-outline-success btn-block" [disabled]="!f.valid">
-                            <i class="fas fa-sign-in-alt"></i>Iniciar Sesión
+                            <i class="fas fa-sign-in-alt"></i>Ingresar
                         </button>
                     </div>
                 </form>
@@ -57,3 +68,4 @@
   </div>
 </div>
 <!--copiar fin-->
+<app-footer></app-footer>
