@@ -28,6 +28,7 @@ width: 200px;
 height:100%;
 left:0;
 width:60px;
+z-index: 999;
 overflow:hidden;
 /*transicion de lo que sale la barra lateral*/
 -webkit-transition:width .05s linear;

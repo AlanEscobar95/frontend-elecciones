@@ -6,3 +6,183 @@
   .grid-container {
     display: grid;
   }
+
+  .blur-img {
+    filter: blur(2px);
+    width: 100%;
+    height: 300px;
+    justify-content: center;
+  
+  }
+  
+  .hr1{
+    background-color: rgb(255, 255, 255) ;
+    padding: 3px;
+    width: 300px;
+  
+  }
+  
+  .card-title1 {
+    font-family: 'Flamenco', cursive;
+    color: rgb(255, 255, 255);
+    font-size: 150px;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .card-title2 {
+    font-family: 'Flamenco', cursive;
+    color: rgba(236, 128, 66, 0.767);
+    font-size: 100px;
+    font-weight: bold;
+  }
+  
+  .card-title3 {
+    font-family: 'Flamenco', cursive;
+    color: rgba(236, 43, 101, 0.767);
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .card-title4 {
+    font-family: 'Flamenco', cursive;
+    color: rgba(43, 72, 236, 0.767);
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+  }
+  .card-title5 {
+    font-family: 'Flamenco', cursive;
+    color: rgba(43, 236, 59, 0.767);
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+  }
+  .card-text {
+    color: rgba(236, 128, 66, 0.767);
+    font-size: 30px;
+    text-align: left;
+  }
+  
+  .card-text1 {
+    color: rgba(236, 43, 101, 0.767);
+    font-size: 25px;
+    text-align: center;
+    font-family: 'Agdasima', sans-serif;
+  }
+  .card-text2 {
+    color: rgba(43, 72, 236, 0.767);
+    font-size: 25px;
+    text-align: center;
+    font-family: 'Agdasima', sans-serif;
+  }
+  .card-text3 {
+    color: rgba(43, 236, 59, 0.767);
+    font-size: 25px;
+    text-align: center;
+    font-family: 'Agdasima', sans-serif;
+  }
+  
+  .card-body {
+    background-color: white;
+    border: rgba(236, 128, 66, 0.767) 4px solid;
+    border-radius: 2%;
+    
+  }
+  .container-fluid{
+    align-items: center;
+  }
+  .card-body hr{
+    background-color: rgb(244, 122, 51);
+    padding: 3px;
+    width: 200px;
+  }
+  
+  .card-body1 {
+  
+    border: rgba(236, 43, 101, 0.767) 4px solid;
+  }
+  
+  .card-body1 hr{
+    background-color: rgba(236, 43, 101, 0.767);
+    padding: 3px;
+    width: 120px;
+  }
+  .card-body2 {
+    
+    border: rgba(43, 72, 236, 0.767) 4px solid;
+  }
+  
+  .card-body2 hr{
+    background-color: rgba(43, 72, 236, 0.767);
+    padding: 3px;
+    width: 120px;
+  }
+  
+  .card-body3 {
+    
+    border: rgba(43, 236, 59, 0.767) 4px solid;
+  }
+  
+  .card-body3 hr{
+    background-color: rgba(43, 236, 59, 0.767);
+    padding: 3px;
+    width: 120px;
+  }
+  
+  .offcanvas-title{
+    font-family: 'Flamenco', cursive;
+    color: rgb(0, 0, 0);
+    font-size: 23px;
+    font-weight: bold;
+  }
+  .button-text {
+    font-family: 'Flamenco', cursive;
+    font-size: 45px; /* Puedes ajustar el valor según tus necesidades */
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+  }
+  
+  .custom-width {
+    width: 100px; /* Puedes ajustar el valor según tus necesidades */
+  }
+  .custom-height {
+    height: 20px; /* Puedes ajustar el valor según tus necesidades */
+  }
+  .card {
+    position: relative; /* Establece la posición relativa para el contenedor */
+  }
+  
+  .card-img-top {
+    height: 250px; /* Ajusta el valor según tus necesidades */
+    object-fit: scale-down; /* Ajusta la forma en que la imagen se ajusta dentro del contenedor */
+  }
+  
+  /*=================boton transparente=============*/
+  .transparent-link {
+    display: inline-block; /* Añadido para ajustar el tamaño */
+    background-color: transparent;
+    color: #D84315;
+    border: 2px solid #D84315;
+    width: 200px; /* Establece el ancho del botón */
+    height: 50px; /* Establece la altura del botón */
+    text-align: center; /* Añadido para centrar horizontalmente el texto */
+    border-radius: 10px;
+    /* Otros estilos que desees aplicar al enlace */
+  }
+  
+  .transparent-link:hover {
+    border-color: #1B4F72;
+    color: #1B4F72;
+  }
+  
+  .button-container {
+    text-align: center;
+  }
+    /*=================boton transparente=============*/
+
+  
+  
+  
+  

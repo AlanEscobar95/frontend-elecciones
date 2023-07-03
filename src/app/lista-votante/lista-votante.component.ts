@@ -4,6 +4,8 @@ import { ListaService } from '../services/lista.service';
 import { Router } from '@angular/router';
 import { TokenService } from '../services/token.service';
 import { ListaVotanteService } from '../services/lista-votante.service';
+import { ToastrService } from 'ngx-toastr';
+
 
 @Component({
   selector: 'app-lista-votante',
@@ -19,6 +21,7 @@ export class ListaVotanteComponent {
     private listaService: ListaService,
     private tokenService: TokenService,
     private listaVotanteService: ListaVotanteService,
+    private toastr: ToastrService,
     private router: Router
   ) { }
 
@@ -54,6 +57,10 @@ export class ListaVotanteComponent {
       this.listaVotanteService.save(voto).subscribe(
         () => {
           console.log('El voto se registró correctamente');
+  
+          this.toastr.success('Gracias por votar', 'Voto Registrado');
+
+          this.router.navigate(['/lista-votante']);
         },
         error => {
           console.error('Error al registrar el voto:', error);
@@ -63,5 +70,5 @@ export class ListaVotanteComponent {
       console.error('ID de usuario no disponible.');
     }
   }
-  
 }
+  

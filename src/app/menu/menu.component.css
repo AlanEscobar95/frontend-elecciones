@@ -6,11 +6,10 @@ section{
     margin-bottom: -15px;
     padding-top: 10px;
     padding-bottom: 20px;
-     
+    /* position: fixed;*/
+     width: 100%;
 }
-.margen{
-    margin-left: 225px;
-}
+
 
 
 

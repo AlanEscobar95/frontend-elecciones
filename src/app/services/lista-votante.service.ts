@@ -3,7 +3,6 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Lista } from '../models/lista';
-import { NuevoUsuarioDto } from '../models/nuevo-usuario.dto';
 import { Voto } from '../models/voto';
 import { TokenService } from './token.service';
 import { LoginUsuarioDto } from '../models/login-usuario.dto';
