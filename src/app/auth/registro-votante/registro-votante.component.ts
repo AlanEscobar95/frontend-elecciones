@@ -55,5 +55,9 @@ export class RegistroVotanteComponent  implements OnInit{
         }
       );
     }
+
+    volver(): void {
+      this.router.navigate(['/lista-usuario']);
+    }
     
 }

@@ -3,6 +3,7 @@ import { AuthService } from '../services/auth.service';
 import { NuevoUsuarioDto } from '../models/nuevo-usuario.dto';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: 'app-editar-usuario',
@@ -16,6 +17,7 @@ export class EditarUsuarioComponent {
     private authService: AuthService,
     private activatedRoute: ActivatedRoute,
     private toastr: ToastrService,
+    private spinner: NgxSpinnerService,
     private router: Router
   ) { }
 
@@ -36,14 +38,16 @@ export class EditarUsuarioComponent {
   }
 
   onUpdate(): void {
+    this.spinner.show();
     const id = this.activatedRoute.snapshot.params['id'];
     this.authService.update(id, this.usuario).subscribe(
       data => {
         this.toastr.success(data.message, 'OK', {
           timeOut: 3000, positionClass: 'toast-top-center'
         });
+        this.spinner.hide();
         this.volver();
-        this.router.navigate(['/']);
+        this.router.navigate(['/lista-usuario']);
       },
       err => {
         this.toastr.error(err.error.message, 'Fail', {
@@ -56,6 +60,6 @@ export class EditarUsuarioComponent {
   }
 
   volver(): void {
-    this.router.navigate(['/usuario']);
+    this.router.navigate(['/lista-usuario']);
   }
 }

@@ -55,13 +55,10 @@ export class ListaVotanteComponent {
         idUsuario: idUsuario,
         idLista: idLista
       };
-      
       this.listaVotanteService.save(voto).subscribe(
         () => {
           console.log('El voto se registró correctamente');
-  
-          this.toastr.success('Gracias por votar', 'Voto Registrado');
-
+          this.toastr.success('Gracias por votar', 'Voto Registrado', { timeOut: 3000 })
           this.router.navigate(['/lista-votante']);
         },
         error => {

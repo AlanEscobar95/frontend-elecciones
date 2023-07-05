@@ -26,8 +26,6 @@
                 <th scope="col">Número de Lista</th>
                 <th scope="col">Imagen</th>
                 <th scope="col" *ngIf="isLogged">Ver/Crear</th>
-                <th scope="col" *ngIf="isLogged">Editar</th>
-                <th scope="col" *ngIf="isLogged">Borrar</th>
               </tr>
             </thead>
             <tbody>
@@ -41,8 +39,8 @@
                 <td>{{lista.imagenLogo}}</td>
     
                 <td><button class="btn btn-outline-primary" routerLink="/detalle/lista/{{lista.id}}"><i class="far fa-eye"></i></button></td>
-                <td *ngIf="isLogged"><button class="btn btn-outline-warning" routerLink="/editar/lista/{{lista.id}}"><i class="far fa-edit"></i></button></td>
-                <td *ngIf="isLogged"><button class="btn btn-outline-danger" (click)="borrar(lista.id)"><i class="far fa-trash-alt"></i></button></td>
+                <!--<td *ngIf="isLogged"><button class="btn btn-outline-warning" routerLink="/editar/lista/{{lista.id}}"><i class="far fa-edit"></i></button></td>
+                <td *ngIf="isLogged"><button class="btn btn-outline-danger" (click)="borrar(lista.id)"><i class="far fa-trash-alt"></i></button></td>-->
               </tr>
             </tbody>
           </table>

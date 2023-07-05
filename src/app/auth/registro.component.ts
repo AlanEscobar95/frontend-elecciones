@@ -55,5 +55,9 @@ export class RegistroComponent  implements OnInit{
         }
       );
     }
+
+    volver(): void {
+      this.router.navigate(['/lista-usuario']);
+    }
     
 }

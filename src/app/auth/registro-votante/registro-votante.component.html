@@ -38,17 +38,17 @@
                     </div>
     
                     <div class="form-group">
-                        <label for="carrera">Carrera</label>
-                        <select class="form-select" name="carrera" id="carrera" [(ngModel)]="carrera">
-                          <option value="seleccionarCarrera" disabled>--Seleccione la carrera--</option>
-                          <option value="desarrolloSoftware">Desarrollo de Software</option>
-                          <option value="disenoModas">Diseño de Modas</option>
-                          <option value="turismo">Turismo</option>
-                          <option value="marketing">Marketing</option>
-                          <option value="gastronomia">Arte Culinario</option>
-                          <option value="controlIncendios">Control de Incendios</option>
-                        </select>
-                      </div>
+                      <label for="carrera">Carrera</label>
+                      <select class="form-select" name="carrera" id="carrera" [(ngModel)]="carrera" required>
+                        <option value="seleccionarCarrera" disabled>--Seleccione la carrera--</option>
+                        <option value="Desarrollo de Software">Desarrollo de Software</option>
+                        <option value="Modas">Modas</option>
+                        <option value="Turismo">Turismo</option>
+                        <option value="Marketing">Marketing</option>
+                        <option value="Arte Culinario">Arte Culinario</option>
+                        <option value="Control de Incendios">Control de Incendios</option>
+                      </select>
+                    </div>
     
                     <div class="form-group">
                         <label for="jornada">Jornada</label>
@@ -75,21 +75,24 @@
                     </div>
     
                     <div class="form-group">
-                        <label for="estadoUsuario"> Estado Usuario</label>
-                        <input type="text" class="form-control" name="estadoUsuario" id="estadoUsuario" required
-                            [(ngModel)]="estadoUsuario">
+                      <label for="seleccionarEstado">Estado Usuario</label>
+                      <select class="form-select" name="estadoUsuario" id="estadoUsuario" [(ngModel)]="estadoUsuario" value="true" required>
+                        <option value="true">true</option>
+                      </select>
                     </div>
-                    
+
                     <div class="form-group">
-                        <label for="estadoVoto">Estado Voto</label>
-                        <input type="text" class="form-control" name="estadoVoto" id="estadoVoto" required
-                            [(ngModel)]="estadoVoto">
+                      <label for="seleccionarEstado">Estado Voto</label>
+                      <select class="form-select" name="estadoVoto" id="estadoVoto" [(ngModel)]="estadoVoto" value="true" required>
+                        <option value="false">false</option>
+                      </select>
                     </div>
     
                     <div class="form-group">
                         <button class="btn btn-outline-success btn-block" [disabled]="!f.valid">
                             <i class="fas fa-user-plus"></i>Crear Cuenta
                         </button>
+                        <button class="btn btn-outline-primary btn-block" (click)="volver()"><i class="fas fa-arrow-alt-circle-left"></i> Mostrar Registros </button>
                     </div>
                 </form>
             </div>

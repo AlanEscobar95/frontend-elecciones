@@ -44,7 +44,7 @@ export class EditarTareaComponent implements OnInit {
           timeOut: 3000, positionClass: 'toast-top-center'
         });
         this.volver();
-        this.router.navigate(['/']);
+        this.router.navigate(['/lista']);
       },
       err => {
         this.toastr.error(err.error.message, 'Fail', {
